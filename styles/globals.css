@@ -26,6 +26,12 @@ article a {
 		z-index: 1;
 		pointer-events: none;
 	}
+    .bgc-y{
+        border-right: 1px solid #636265;
+    }
+    .bgc-x{
+        border-bottom: 1px solid #636265;
+    }
 }
 
 @layer utilities {
@@ -112,27 +118,21 @@ article a {
 		/*exes*/
 		.md-box-y {
 			margin-left: calc(6.66% - 0.96px);
-			border-right: 1px solid #636265;
 		}
 		.lg-box-y {
-			margin-left: calc(4.54% - 0.96px);
-			border-right: 1px solid #636265;
+			margin-left: calc(4.54% - 0.96px);	
 		}
 		.xl-box-y {
 			margin-left: calc(3.44% - 0.96px);
-			border-right: 1px solid #636265;
 		}
 		.md-box-x {
 			margin-top: calc(6.66% - 0.96px);
-			border-bottom: 1px solid #636265;
 		}
 		.lg-box-x {
 			margin-top: calc(4.54% - 0.96px);
-			border-bottom: 1px solid #636265;
 		}
 		.xl-box-x {
 			margin-top: calc(3.44% - 0.96px);
-			border-bottom: 1px solid #636265;
 		}
 
         /*Aspect ratio*/
