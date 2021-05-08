@@ -8,12 +8,9 @@ article a {
 /* purgecss end ignore */
 @tailwind utilities;
 
-.Kara_Position-content {
-	@apply relative top-14 md:top-16;
-}
 
 @layer utilities {
-	.wrapper-grid {
+    .wrapper-grid {
 		height: 165.1%;
 		width: 100%;
 		position: absolute;
@@ -32,9 +29,6 @@ article a {
     .bgc-x{
         border-bottom: 1px solid #636265;
     }
-}
-
-@layer utilities {
 	@variants responsive {
 		.grid-mt-0 {
 			margin-top: 0;
