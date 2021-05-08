@@ -1,32 +1,13 @@
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
+/* purgecss end ignore */
 
 @layer utilities {
-    .wrapper-grid {
-		height: 165.1%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		border-left: 1px solid #000;
-		border-top: 1px solid #000;
-		overflow: hidden;
-		z-index: 1;
-		pointer-events: none;
-	}
-    .bgc-y{
-        border-right: 1px solid #636265;
-    }
-    .bgc-x{
-        border-bottom: 1px solid #636265;
-    }
 	@variants responsive {
 		.grid-mt-0 {
 			margin-top: 0;
 		}
-
 		.md-grid-mt-1 {
 			margin-top: 6.66%;
 		}
@@ -54,7 +35,6 @@
 		.xl-grid-mt-3 {
 			margin-top: 10.32%;
 		}
-
 		.md-grid-mt-n1 {
 			margin-top: -6.66%;
 		}
@@ -82,7 +62,6 @@
 		.xl-grid-mt-n3 {
 			margin-top: -10.32%;
 		}
-
 		.md-grid-ml-1 {
 			margin-left: 6.66%;
 		}
@@ -102,40 +81,19 @@
 		.xl-grid-img {
 			width: 20.64%;
 		}
-		/*exes*/
-		.md-box-y {
-			margin-left: calc(6.66% - 0.96px);
+		/*Aspect ratio*/
+		.ar4x6 {
+			padding-bottom: 150%;
 		}
-		.lg-box-y {
-			margin-left: calc(4.54% - 0.96px);	
+		.ar4x5 {
+			padding-bottom: 125%;
 		}
-		.xl-box-y {
-			margin-left: calc(3.44% - 0.96px);
+		.ar3x3 {
+			padding-bottom: 100%;
 		}
-		.md-box-x {
-			margin-top: calc(6.66% - 0.96px);
-		}
-		.lg-box-x {
-			margin-top: calc(4.54% - 0.96px);
-		}
-		.xl-box-x {
-			margin-top: calc(3.44% - 0.96px);
-		}
-
-        /*Aspect ratio*/
-        .ar4x6 {
-            padding-bottom: 150%;
-        }
-        .ar4x5 {
-            padding-bottom: 125%;
-        }
-        .ar3x3 {
-            padding-bottom: 100%;
-        }
 	}
 }
 
-/* purgecss end ignore */
 @tailwind utilities;
 
 html {
@@ -145,4 +103,55 @@ html {
 article a {
 	color: rgb(49, 49, 182);
 	text-decoration: underline;
+}
+
+.hidden{
+	display: none;
+}
+
+.wrapper-grid {
+    height: 165.1%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    overflow: hidden;
+    z-index: 1;
+}
+.bgc-y{
+    border-right: 1px solid #636265;
+}
+.bgc-x{
+    border-bottom: 1px solid #636265;
+}
+@media (min-width: 768px) {
+	.md\:md-box-y {
+		margin-left: calc(6.66% - 0.96px);
+	}
+	.md\:md-box-x {
+		margin-top: calc(6.66% - 0.96px);
+	}
+	.md\:md-block{
+		display: block;
+	}
+}
+@media (min-width: 1024px) {
+	.lg\:lg-box-y {
+		margin-left: calc(4.54% - 0.96px);	
+	}
+	.lg\:lg-box-x {
+		margin-top: calc(4.54% - 0.96px);
+	}
+}
+@media (min-width: 1280px) {
+	.xl\:xl-box-y {
+		margin-left: calc(3.44% - 0.96px);
+	}
+	
+	.xl\:xl-box-x {
+		margin-top: calc(3.44% - 0.96px);
+	}
 }
