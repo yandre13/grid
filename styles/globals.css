@@ -122,10 +122,12 @@ article a {
     z-index: 1;
 }
 .bgc-y{
-    border-right: 1px solid #636265;
+    width: 1px;
+    background: #636265;
 }
 .bgc-x{
-    border-bottom: 1px solid #636265;
+    height: 1px;
+    background: #636265;
 }
 @media (min-width: 768px) {
 	.md\:md-box-y {
