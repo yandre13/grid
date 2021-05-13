@@ -2,68 +2,16 @@ import React from 'react'
 
 function Grid() {
 	return (
-		<div className="wrapper-grid pointer-events-none hidden md:md-block">
-			<div className="h-full w-full absolute flex flex-wrap">
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-				<div className="w-0 h-full md:md-box-y lg:lg-box-y xl:xl-box-y bgc-y"></div>
-			</div>
-			<div className="w-full absolute flex flex-wrap">
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
-				<div className="h-0 w-full md:md-box-x lg:lg-box-x xl:xl-box-x bgc-x"></div>
+		<div className="wrapper-grid">
+            <div class="line-left"></div>
+            <div class="line-top"></div>
+			<div className="h-full w-full relative flex flex-wrap">
+
+                {Array.from(Array(29).keys()).map(e=><div key={e} className="box-y md:md-box-y lg:lg-box-y xl:xl-box-y"></div>)}
+
+                <div className="absolute w-full h-full flex flex-col">
+                {Array.from(Array(40).keys()).map(e=><div key={e} className="pbox-x md:md-pbox-x lg:lg-pbox-x xl:xl-pbox-x"></div>)}
+                </div>
 			</div>
 		</div>
 	)
