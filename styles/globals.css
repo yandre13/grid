@@ -48,6 +48,9 @@
     }
 
 	@variants responsive {
+        .clear-trs{
+            transform: none !important;
+        }
 		.grid-mt-0 {
 			margin-top: 0;
 		}
@@ -203,7 +206,15 @@
  
    .line-left {
     position: absolute;
-    width: 0.1%;
+    width: 1%;
+    max-width: 1px;
+    height: 100%;
+    background: var(--grid-color);
+   }
+   .line-right {
+    right: 0;
+    position: absolute;
+    width: 1%;
     max-width: 1px;
     height: 100%;
     background: var(--grid-color);
@@ -211,8 +222,10 @@
  
    .line-top {
     position: absolute;
-    height: 0.1%;
+    height: 1%;
     max-height: 1px;
     width: 100%;
     background: var(--grid-color);
    }
+
+   
