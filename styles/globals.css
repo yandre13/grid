@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 :root {
-    --grid-color: rgba(0, 0, 0, .5);
+    --grid-color: rgba(0, 0, 0, .3);
   }
 @layer utilities {
     .grid-mt-1 {
@@ -192,7 +192,7 @@
     }
  
    .wrapper-grid {
-    height: 165.1%;
+    height: 100.08%;
     width: 100%;
     position: absolute;
     top: 0;
