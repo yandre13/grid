@@ -22,7 +22,7 @@ export default function Home() {
                     xl:xl-grid-img xl:xl-grid-ml-1 xl:xl-grid-mt-1">
                     <div className="w-full h-0 overflow-hidden relative ar4x6">
                         <a href="#">
-                            <img src="https://images.unsplash.com/photo-1619937812459-bf054619c8f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
+                            <img src="https://app.yandre.me/uploads/bro/img_grid_1.png" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ export default function Home() {
                 ">
                     <div className="w-full h-0 overflow-hidden relative ar3x3">
                         <a href="#">
-                            <img src="https://images.unsplash.com/photo-1619918577835-7f407ea12a2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
+                            <img src="https://app.yandre.me/uploads/bro/img_grid_2.png" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ export default function Home() {
                     ">
                     <div className="w-full h-0 overflow-hidden relative ar4x6">
                         <a href="#">
-                            <img src="https://images.unsplash.com/photo-1619918577835-7f407ea12a2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
+                            <img src="https://app.yandre.me/uploads/bro/img_grid_3.png" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ export default function Home() {
                     ">
                     <div className="w-full h-0 overflow-hidden relative ar4x6">
                         <a href="#">
-                            <img src="https://images.unsplash.com/photo-1619937812459-bf054619c8f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
+                            <img src="https://app.yandre.me/uploads/bro/img_grid_4.png" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ export default function Home() {
                 ">
                     <div className="w-full h-0 overflow-hidden relative ar3x3 lg:ar4x6 xl:ar3x3">
                         <a href="#">
-                            <img src="https://images.unsplash.com/photo-1619918577835-7f407ea12a2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
+                            <img src="https://app.yandre.me/uploads/bro/img_grid_5.png" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ export default function Home() {
                 ">
                     <div className="w-full h-0 overflow-hidden relative ar4x6">
                         <a href="#">
-                            <img src="https://images.unsplash.com/photo-1619937812459-bf054619c8f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
+                            <img src="https://app.yandre.me/uploads/bro/img_grid_6.png" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
                         </a>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ export default function Home() {
                 ">
                     <div className="w-full h-0 overflow-hidden relative ar3x3">
                         <a href="#">
-                            <img src="https://images.unsplash.com/photo-1619918577835-7f407ea12a2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" className="w-full h-full absolute top-0 left-0 object-cover" alt="" />
+                            <img src="https://app.yandre.me/uploads/bro/img_grid_7.png" className="w-full h-full absolute top-0 left-0 object-cover" alt="" />
                         </a>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ export default function Home() {
                 ">
                     <div className="w-full h-0 overflow-hidden relative ar3x3 lg:ar4x6 xl:ar3x3">
                         <a href="#">
-                            <img src="https://images.unsplash.com/photo-1619918577835-7f407ea12a2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
+                            <img src="https://app.yandre.me/uploads/bro/img_grid_8.png" className="w-full h-full absolute top-0 left-0 object-cover" alt=""/>
                         </a>
                     </div>
                 </div>
