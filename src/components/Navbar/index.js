@@ -43,8 +43,8 @@ export default function Named() {
                 <h1 className="font-semibold text-3xl
                     md:text-2xl md:mt-1 xl:mt-2 md:mb-10
                     xl:text-[1.8vw]">Visualiza<span className="text-yellow-400 text-4xl">.</span></h1>
-                <button
-					className={cn('flex items-center focus:outline-none z-10', {hidden: !isMobile})}
+                <span
+					className={cn('flex items-center z-10', {hidden: !isMobile})}
 					onClick={() => {
                         setOpen(!open)
                         open ? controls.start('hidden') : controls.start('visible')
@@ -52,7 +52,7 @@ export default function Named() {
 				>
 					<Menu/>
 					{!open ? <span>Menu</span> : <span>Close</span>}
-				</button>
+				</span>
             </div>
             <motion.nav variants={variants} animate={controls} initial="hidden" className={
                 cn('-mt-4 -ml-4 -mr-5 w-[110%] bg-black md:w-full md:bg-transparent md:m-0',
