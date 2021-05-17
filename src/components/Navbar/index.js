@@ -36,7 +36,7 @@ export default function Named() {
     return (
         <header className="mb-5 md:mb-0 flex flex-wrap md:block md:pl-2 lg:pl-3 w-full
         md:w-[15%]
-        lg:w-[13%] xl:w-[9.9%]">
+        lg:w-[13%] xl:w-[9.8%]">
             <div className={
                 cn('w-full order-1 md:order-first flex justify-between', {'mt-2': open && isMobile})
             }>

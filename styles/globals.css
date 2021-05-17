@@ -30,6 +30,9 @@
     .grid-ml-1 {
         margin-left: 12.5%;
     }
+    .grid-mb-1 {
+        margin-bottom: 12.5%;
+    }
     /*Img*/
     .grid-img {
         width: 75%;
@@ -53,6 +56,9 @@
         }
 		.grid-mt-0 {
 			margin-top: 0;
+		}
+        .grid-mb-0 {
+			margin-bottom: 0;
 		}
 		.md-grid-mt-1 {
 			margin-top: 6.66%;
@@ -137,6 +143,16 @@
 			margin-left: 3.448%;
 		}
 
+        .md-grid-mb-1 {
+			margin-bottom: 6.66%;
+		}
+		.lg-grid-mb-1 {
+			margin-bottom: 4.54%;
+		}
+		.xl-grid-mb-1 {
+			margin-bottom: 3.448%;
+		}
+
 		/*Images*/
 		.md-grid-img {
 			width: 39.96%;
@@ -192,7 +208,7 @@
     }
  
    .wrapper-grid {
-    height: 100.08%;
+    height: calc(100% + 1px);
     width: 100%;
     position: absolute;
     top: 0;
