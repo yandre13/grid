@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Grid from '../src/components/Grid'
 import Navbar from '../src/components/Navbar'
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import {Splide, SplideSlide} from 'splide-nextjs/react-splide'
+import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css'
 
 export default function Home() {
   return (
