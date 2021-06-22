@@ -4,6 +4,7 @@ import Grid from '../src/components/Grid'
 import Navbar from '../src/components/Navbar'
 import {Splide, SplideSlide} from 'splide-nextjs/react-splide'
 import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -189,14 +190,16 @@ export default function Home() {
                     lg:w-[22.7%] lg:ml-[9.08%] lg:mr-[4.54%] lg:mt-[45.4%]
                     xl:w-[10.344%] xl:ml-[3.448%] xl:mr-0 xl:mt-[10.344%]
                     ">
-                    <button className="w-full bg-[#FDD704] relative h-0 flex pb-[25%] md:pb-[20%] xl:pb-[33.33%]">
+                    <Link href='/portafolio'>
+                        <a className="w-full bg-[#FDD704] relative h-0 flex pb-[25%] md:pb-[20%] xl:pb-[33.33%]">
                         <div className="absolute h-full w-[75%] md:w-[80%] xl:w-[66.66%] text-center text-sm md:text-base xl:text-xs font-sec inline-flex justify-center items-center">
                             Ver más proyectos
                         </div>
                         <div className="absolute h-full w-[25%] md:w-[20%] xl:w-[33.33%] text-center text-xl font-third inline-flex justify-center items-center right-0">
                             <span className="transform scale-[1.5]">+</span>
                         </div>
-                    </button>
+                        </a>
+                    </Link>
                 </div>
 
 

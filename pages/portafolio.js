@@ -66,7 +66,7 @@ export default function Home() {
 
                 <div className="w-[75%] ml-[12.5%] mt-[12.5%]
                 md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-                lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[13.62%]
+                lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-13.62%]
                 xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-3.448%] 
                 ">
                     <div className="w-full h-0 overflow-hidden relative ar3x3 lg:ar4x6 xl:ar3x3">
