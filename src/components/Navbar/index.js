@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {useRouter} from 'next/router'
 import cn from 'classnames'
 import Menu from '../svgs/Menu'
+import Logo from '../svgs/Logo'
 import {motion, useAnimation} from 'framer-motion'
 
 
@@ -42,7 +43,7 @@ export default function Named() {
             }>
                 <h2 className="font-semibold text-xl
                     md:mt-1 xl:mt-2 md:mb-10 w-full">
-                    <img className="w-[50%] md:w-[95%]" src='/img/logo_visualiza.svg' alt='Visualiza' />
+                    <Logo color='black' classname='w-[50%] md:w-[95%]' />
                     </h2>
                 <span
 					className={cn('flex items-center z-10 cursor-pointer', {hidden: !isMobile})}
