@@ -5,7 +5,7 @@ import Navbar from '../src/components/Navbar'
 import {Splide, SplideSlide} from 'splide-nextjs/react-splide'
 import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css'
 import Link from 'next/link'
-import Logo from '../src/components/svgs/Logo'
+import Footer from '../src/components/Footer'
 
 export default function Home() {
   return (
@@ -21,35 +21,8 @@ export default function Home() {
             <Grid /> 
             <div className="flex flex-wrap">
 
-            <div className="w-full">
-                    <div className="w-full relative pb-[162.5%] md:pb-[100%] lg:pb-[72.7272%] xl:pb-[55.14%]">
-                        <h1 className="absolute text-5xl sm:text-6xl md:text-[80px] md:leading-none lg:text-7xl xl:text-8xl font-medium tracking-tight
-                        mt-[12.5%] flex justify-center mx-auto inset-x-0
-                        md:w-[75%] md:mt-[15.2%]
-                        lg:block lg:ml-[9.08%] lg:mt-[19.4%]
-                        xl:ml-[6.896%] xl:mt-[11.344%]
-                        "><span>Design <span className="font-sec block">is thinking</span> made <span className="font-sec">visual.</span></span></h1>
-
-                        <p className="absolute text-base xl:text-lg font-medium tracking-tight leading-normal
-                        mt-[63.9%] flex justify-center mx-auto inset-x-0 px-[14%]
-                        md:w-[75%] md:mt-[56.6%] md:px-[3%]
-                        lg:block lg:w-[31.78%] lg:ml-[6.896%] lg:mt-[25%] lg:p-0 lg:right-[10%] lg:left-auto
-                        xl:w-[27.548%] xl:ml-[6.896%] xl:mt-[15.6%] xl:right-[11.2%]
-                        ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, delectus. Nesciunt repellat iusto tenetur. Ex consequuntur sequi, dignissimos odit, alias fuga saepe in magni ipsa optio commodi libero aut sapiente.</p>
-
-                        <button className="absolute text-base xl:text-lg font-medium z-20
-                        w-[18%] pb-[18%] mt-[128.4%] flex justify-center items-center mx-auto inset-x-0 
-                        md:w-[6.66%] md:pb-[6.66%] md:mt-[79.92%] 
-                        lg:w-[4.54%] lg:pb-[4.54%] lg:mt-[54.48%] 
-                        xl:w-[3.44%] xl:pb-[3.44%] xl:mt-[44.824%] 
-                        ">
-                            <img className="absolute w-[90%] h-[90%] top-[5%]" src='/img/down-fill.svg' alt='next' />
-                        </button>
-
-                    </div>
-                </div>
                 {/* ADS */}
-                <div className="w-full">
+                <div className="w-full ">
                 <Splide options={{
 					type: 'loop',
 					// speed: 700,
@@ -220,73 +193,7 @@ export default function Home() {
                     </div>
                 </article>
             </div>
-            <footer className="bg-black w-[calc(100%+1.5rem)] md:w-full z-10 absolute -mx-3 md:mx-0">
-                <section className="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-8">
-                    <div className="pt-10 pb-5 xl:py-10">
-                        <h3 className="font-main text-xl font-medium text-white mb-3 md:mb-6">Services</h3>
-                        <ul>
-                            <li className='mb-2 font-main text-sm text-gray-300'>
-                                Rendering
-                            </li>
-                            <li className='mb-2 font-main text-sm text-gray-300'>
-                                Virtual Readity
-                            </li>
-                            <li className='mb-2 font-main text-sm text-gray-300'>
-                            Photorealism
-                            </li>
-                            <li className='font-main text-sm text-gray-300'>
-                            Illustration
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="py-5 sm:pt-10 xl:py-10">
-                        <h3 className="font-main text-xl font-medium text-white mb-3 md:mb-6">Information</h3>
-                        <p className="font-main text-sm text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" className="block w-full lg:w-[90%] font-main text-base text-gray-300 px-6 py-[6px] border border-gray-300 text-center mt-4">Read more</a>
-                    </div>
-                    <div className="py-5 xl:py-10">
-                        <h3 className="font-main text-xl font-medium text-white mb-3 md:mb-6">Social media</h3>
-                        <div className='flex'>
-                            <div className='mr-4'>
-                                <img width='38' height='38' src='/img/facebook-filled.svg' alt='next' />
-                            </div>
-                            <div className='mr-4'>
-                                <img width='38' height='38' src='/img/instagram-filled.svg' alt='next' />
-                            </div>
-                            <div>
-                                <img width='38' height='38' src='/img/youtube-filled.svg' alt='next' />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="py-5 xl:py-10">
-                        <h3 className="font-main text-xl font-medium text-white mb-3 md:mb-6">Contact</h3>
-                        <form action="#">
-                            <div>
-                                <input type="email" placeholder='Email' className="w-full bg-transparent text-sm placeholder-gray-300
-                                py-1 px-4 mb-3 border border-gray-300 text-gray-200 rounded-none" />
-                            </div>
-                            <div>
-                                <input type="text" placeholder='Name / Nombre' className="w-full bg-transparent text-sm placeholder-gray-300
-                                py-1 px-4 mb-3 border border-gray-300 text-gray-200 rounded-none" />
-                            </div>
-                            <div>
-                                <input type="text" placeholder='Subject / Asunto' className="w-full bg-transparent text-sm placeholder-gray-300
-                                py-1 px-4 mb-3 border border-gray-300 text-gray-200 rounded-none" />
-                            </div>
-                            <div>
-                                <textarea rows="3" placeholder='Message / Mensaje' className="w-full bg-transparent text-sm placeholder-gray-300
-                                py-1 px-4 mb-3 border border-gray-300 text-gray-200 rounded-none"></textarea>
-                            </div>
-                            <div>
-                                <a href="#" className="block w-full font-main text-sm text-gray-300 px-6 py-[6px] border border-gray-300 text-center">Enviar / Send</a>
-                            </div>
-                        </form>
-                    </div>
-                    <div className='row-end-7 mt-6 xl:-mt-8 pb-8'>
-                        <Logo color='white' classname='w-[40%] sm:w-[50%]' />
-                    </div>
-                </section>
-            </footer>
+            <Footer />
         </div>
       </main>
       
