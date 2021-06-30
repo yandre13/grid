@@ -2,14 +2,14 @@ import React from 'react'
 import cn from 'classnames'
 
 export default function CardHome({
-	classname,
+	classnames,
 	aspectRatio,
 	image,
 	title = [],
 	Component,
 }) {
 	return (
-		<div className={classname}>
+		<div className={classnames}>
 			<div className={cn('w-full h-0 relative', aspectRatio)}>
 				<a href="#">
 					<img

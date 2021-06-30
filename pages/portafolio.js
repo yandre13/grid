@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Grid from 'components/Grid'
 import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
+import CardPortfolio from 'components/Card/CardPortfolio'
 
 export default function Home() {
 	return (
@@ -17,149 +18,85 @@ export default function Home() {
 				<div className="relative h-full w-full md:w-[85%] lg:w-[87%] xl:w-[90%]">
 					<Grid />
 					<div className="flex flex-wrap">
-						<div
-							className="w-[75%] ml-[12.5%] mt-[12.5%]
-                    md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-                    lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-                    xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]
-                    "
-						>
-							<div className="w-full h-0 overflow-hidden relative ar4x6">
-								<a href="#">
-									<img
-										src="/img/img_grid_1.png"
-										className="w-full h-full absolute top-0 left-0 object-cover"
-										alt=""
-									/>
-								</a>
-							</div>
-						</div>
+						<CardPortfolio
+							classnames="w-[75%] ml-[12.5%] mt-[12.5%]
+					md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
+					lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
+					xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]"
+							aspectRatio="ar4x6"
+							image="/img/img_grid_1.png"
+							title={['PROYECTO CASA A', 'Miraflores 2019']}
+						/>
 
-						<div
-							className="w-[75%] ml-[12.5%] mt-[12.5%]
-                    md:w-[39.96%] md:ml-[6.66%] md:mt-[13.32%]
-                    lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[9.08%]
-                    xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[6.896%] 
-                "
-						>
-							<div className="w-full h-0 overflow-hidden relative ar3x3">
-								<a href="#">
-									<img
-										src="/img/img_grid_2.png"
-										className="w-full h-full absolute top-0 left-0 object-cover"
-										alt=""
-									/>
-								</a>
-							</div>
-						</div>
+						<CardPortfolio
+							classnames="w-[75%] ml-[12.5%] mt-[12.5%]
+							md:w-[39.96%] md:ml-[6.66%] md:mt-[13.32%]
+							lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[9.08%]
+							xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[6.896%]"
+							aspectRatio="ar3x3"
+							image="/img/img_grid_2.png"
+							title={['PROYECTO CASA B', 'Miraflores 2019']}
+						/>
 
-						<div
-							className="w-[75%] ml-[12.5%] mt-[12.5%]
-                    md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-                    lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[13.62%]
-                    xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[10.344%] 
-                    "
-						>
-							<div className="w-full h-0 overflow-hidden relative ar4x6">
-								<a href="#">
-									<img
-										src="/img/img_grid_3.png"
-										className="w-full h-full absolute top-0 left-0 object-cover"
-										alt=""
-									/>
-								</a>
-							</div>
-						</div>
+						<CardPortfolio
+							classnames="w-[75%] ml-[12.5%] mt-[12.5%]
+							md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
+							lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[13.62%]
+							xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[10.344%]"
+							aspectRatio="ar4x6"
+							image="/img/img_grid_3.png"
+							title={['PROYECTO CASA C', 'Miraflores 2019']}
+						/>
 
-						<div
-							className="w-[75%] ml-[12.5%] mt-[12.5%]
-                    md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-                    lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-                    xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[6.896%] 
-                    "
-						>
-							<div className="w-full h-0 overflow-hidden relative ar4x6">
-								<a href="#">
-									<img
-										src="/img/img_grid_4.png"
-										className="w-full h-full absolute top-0 left-0 object-cover"
-										alt=""
-									/>
-								</a>
-							</div>
-						</div>
+						<CardPortfolio
+							classnames="w-[75%] ml-[12.5%] mt-[12.5%]
+							md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
+							lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
+							xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[6.896%]"
+							aspectRatio="ar4x6"
+							image="/img/img_grid_4.png"
+							title={['PROYECTO CASA D', 'Miraflores 2019']}
+						/>
 
-						<div
-							className="w-[75%] ml-[12.5%] mt-[12.5%]
-                md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-                lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-13.62%]
-                xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-3.448%] 
-                "
-						>
-							<div className="w-full h-0 overflow-hidden relative ar3x3 lg:ar4x6 xl:ar3x3">
-								<a href="#">
-									<img
-										src="/img/img_grid_5.png"
-										className="w-full h-full absolute top-0 left-0 object-cover"
-										alt=""
-									/>
-								</a>
-							</div>
-						</div>
+						<CardPortfolio
+							classnames="w-[75%] ml-[12.5%] mt-[12.5%]
+							md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
+							lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-13.62%]
+							xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-3.448%]"
+							aspectRatio="ar3x3"
+							image="/img/img_grid_5.png"
+							title={['PROYECTO CASA E', 'Miraflores 2019']}
+						/>
 
-						<div
-							className="w-[75%] ml-[12.5%] mt-[12.5%]
-                md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-                lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-                xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-10.344%] 
-                "
-						>
-							<div className="w-full h-0 overflow-hidden relative ar4x6">
-								<a href="#">
-									<img
-										src="/img/img_grid_6.png"
-										className="w-full h-full absolute top-0 left-0 object-cover"
-										alt=""
-									/>
-								</a>
-							</div>
-						</div>
+						<CardPortfolio
+							classnames="w-[75%] ml-[12.5%] mt-[12.5%]
+							md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
+							lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
+							xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-10.344%]"
+							aspectRatio="ar4x6"
+							image="/img/img_grid_6.png"
+							title={['PROYECTO CASA F', 'Miraflores 2019']}
+						/>
 
-						<div
-							className="w-[75%] ml-[12.5%] mt-[12.5%] mb-0
-                md:w-[39.96%] md:ml-[6.66%] md:mt-0
-                lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-                xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]
-                "
-						>
-							<div className="w-full h-0 overflow-hidden relative ar3x3">
-								<a href="#">
-									<img
-										src="/img/img_grid_7.png"
-										className="w-full h-full absolute top-0 left-0 object-cover"
-										alt=""
-									/>
-								</a>
-							</div>
-						</div>
+						<CardPortfolio
+							classnames="w-[75%] ml-[12.5%] mt-[12.5%] mb-0
+							md:w-[39.96%] md:ml-[6.66%] md:mt-0
+							lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
+							xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%] xl:mb-[3.448%]"
+							aspectRatio="ar3x3"
+							image="/img/img_grid_7.png"
+							title={['PROYECTO CASA G', 'Miraflores 2019']}
+						/>
 
-						<div
-							className="w-[75%] ml-[12.5%] mt-[12.5%] mb-[12.5%]
-                md:w-[39.96%] md:ml-[6.66%] md:my-[6.66%]
-                lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-13.62%] lg:mb-[4.54%]
-                xl:w-[20.688%] xl:ml-[3.448%] xl:mt-0 xl:mb-[3.448%]
-                "
-						>
-							<div className="w-full h-0 overflow-hidden relative ar3x3 lg:ar4x6 xl:ar3x3">
-								<a href="#">
-									<img
-										src="/img/img_grid_8.png"
-										className="w-full h-full absolute top-0 left-0 object-cover"
-										alt=""
-									/>
-								</a>
-							</div>
-						</div>
+						<CardPortfolio
+							classnames="w-[75%] ml-[12.5%] mt-[12.5%] mb-[12.5%]
+							md:w-[39.96%] md:ml-[6.66%] md:my-[6.66%]
+							lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-13.62%] lg:mb-[4.54%]
+							xl:w-[20.688%] xl:ml-[3.448%] xl:mt-0 xl:mb-[3.448%]"
+							aspectRatio="ar3x3 lg:ar4x6 xl:ar3x3"
+							image="/img/img_grid_8.png"
+							title={['PROYECTO CASA H', 'Miraflores 2019']}
+						/>
 					</div>
 					<Footer />
 				</div>

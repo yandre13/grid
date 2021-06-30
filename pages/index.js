@@ -71,7 +71,7 @@ export default function Home() {
 						{/* imgs */}
 
 						<CardHome
-							classname="w-[75%] ml-[12.5%] mt-[12.5%]
+							classnames="w-[75%] ml-[12.5%] mt-[12.5%]
 								md:w-[59.94%] md:ml-[13.32%] md:mt-[6.66%]
 								lg:w-[40.86%] lg:ml-[4.54%] lg:mr-[54.48%] lg:mt-[4.54%]
 								xl:w-[27.587%] xl:ml-[10.344%] xl:mr-0 xl:mt-[3.448%]"
@@ -81,7 +81,7 @@ export default function Home() {
 						/>
 
 						<CardHome
-							classname="w-[75%] ml-[12.5%] mt-[25%]
+							classnames="w-[75%] ml-[12.5%] mt-[25%]
 							md:w-[59.94%] md:ml-[13.32%] md:mt-[19.98%]
 							lg:w-[40.86%] lg:ml-[45.4%] lg:mt-[9.08%]
 							xl:w-[27.587%] xl:ml-[17.24%] xl:mt-[13.792%]"
@@ -114,7 +114,7 @@ export default function Home() {
 						</div>
 
 						<CardHome
-							classname="w-[75%] ml-[12.5%] mb-[25%] mt-[25%]
+							classnames="w-[75%] ml-[12.5%] mb-[25%] mt-[25%]
 							md:w-[59.94%] md:ml-[13.32%] md:mb-0 md:mt-[13.32%]
 							lg:w-[40.86%] lg:ml-[4.54%] lg:mr-[9.08%] lg:mt-[9.08%]
 							xl:w-[27.587%] xl:ml-[27.584%] xl:mr-0 xl:mt-[6.896%]"
@@ -124,7 +124,7 @@ export default function Home() {
 						/>
 
 						<CardHome
-							classname="hidden
+							classnames="hidden
 							xl:block xl:w-[27.587%] xl:ml-[13.792%] xl:mt-[-17.24%]"
 							image="/img/home_4.jpg"
 							aspectRatio="ar3x3"
