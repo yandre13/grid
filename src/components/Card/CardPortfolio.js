@@ -13,8 +13,10 @@ export default function CardPortfolio({classnames, aspectRatio, image, title}) {
 							'w-full h-full absolute top-0 left-0 object-cover',
 							isHover && 'filter grayscale contrast-600',
 						)}
-						onMouseEnter={() => setIsHover(c => !c)}
-						onMouseLeave={() => setIsHover(c => !c)}
+						onMouseEnter={() => setIsHover(true)}
+						onMouseLeave={() => setIsHover(false)}
+						onTouchStart={() => setIsHover(true)}
+						onTouchEnd={() => setIsHover(false)}
 						alt=""
 					/>
 				</a>
