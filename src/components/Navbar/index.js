@@ -4,7 +4,7 @@ import {useRouter} from 'next/router'
 import cn from 'classnames'
 import Menu from '../svgs/Menu'
 import Logo from '../svgs/Logo'
-import {motion, useAnimation} from 'framer-motion'
+import {motion} from 'framer-motion'
 
 const variants = {
 	visible: {
@@ -26,8 +26,6 @@ export default function Named() {
 		}
 	}
 
-	const controls = useAnimation()
-
 	React.useEffect(() => {
 		handleResize()
 		window.addEventListener('resize', handleResize)
@@ -45,20 +43,18 @@ export default function Named() {
 					'mt-2': open && isMobile,
 				})}
 			>
-				<h2
-					className="font-semibold text-xl
-                    md:mt-1 xl:mt-2 md:mb-6 w-full"
-				>
-					<Logo color="black" classname="w-[35%] sm:w-[25%] md:w-[85%]" />
+				<h2 className="font-semibold text-xl md:mt-1 xl:mt-2 md:mb-6 w-full">
+					<Link href="/">
+						<a>
+							<Logo color="black" classname="w-[35%] sm:w-[25%] md:w-[85%]" />
+						</a>
+					</Link>
 				</h2>
 				<span
 					className={cn('flex items-center z-10 cursor-pointer', {
 						hidden: !isMobile,
 					})}
-					onClick={() => {
-						setOpen(!open)
-						open ? controls.start('hidden') : controls.start('visible')
-					}}
+					onClick={() => setOpen(!open)}
 				>
 					<Menu />
 					{!open ? <span>Menu</span> : <span>Close</span>}
@@ -66,7 +62,7 @@ export default function Named() {
 			</div>
 			<motion.nav
 				variants={variants}
-				animate={controls}
+				animate={open ? 'visible' : 'hidden'}
 				initial="hidden"
 				className={cn(
 					'-mt-4 -ml-3 -mr-3 w-[calc(100%+6rem)] bg-black md:w-full md:bg-transparent md:m-0',
@@ -93,7 +89,7 @@ export default function Named() {
 						</Link>
 					</li>
 					<li className="py-3 md:py-1">
-						<Link href="#">
+						<Link href="/portafolio">
 							<a
 								className={cn('font-sec font-semibold text-sm', {
 									'hover:text-white': isMobile,
