@@ -24,7 +24,16 @@ export default function Home() {
 				<div className="relative h-full w-full md:w-[85%] lg:w-[87%] xl:w-[90%]">
 					<Grid />
 					<div className="flex flex-wrap">
-						<ListPortfolio selectedId={projectId} />
+						{/* <div className="hidden my-[12.5%] md:mt-[-13.32%]"></div>
+						<div className="hidden my-[12.5%] md:mt-[-33.3%]"></div>
+						<div className="hidden my-[12.5%] md:mt-[-53.28%] md:my-[6.66%] lg:mt-[-9.08%] lg:mt-[-49.94%] lg:ml-[36.32%]"></div>
+						<div className="hidden lg:mt-[-63.56%]"></div>
+						<div className="hidden xl:mt-[-17.24%]"></div>
+						<div className="hidden xl:mt-[24.136%]"></div>
+						<div className="hidden xl:mt-[-37.928%] xl:ml-[27.584%]"></div>
+						<div className="hidden lg:mb-[-4.54%] lg:mt-[-22.7%]"></div> */}
+						{/* <div className="hidden lg:mt-[-81.72%] lg:mt-[-36.32%] xl:mt-[-27.584%]"></div> */}
+						<ListPortfolio />
 						<AnimatePresence>
 							{projectId && <Item id={projectId} key="item" />}
 						</AnimatePresence>

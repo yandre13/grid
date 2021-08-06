@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import cn from 'classnames'
 
 export default function CardHome({
@@ -12,10 +13,11 @@ export default function CardHome({
 		<div className={classnames}>
 			<div className={cn('w-full h-0 relative', aspectRatio)}>
 				<a href="#">
-					<img
+					<Image
 						src={image}
 						className="w-full h-full absolute top-0 left-0 object-cover"
 						alt=""
+						placeholder="blur"
 					/>
 				</a>
 				<div

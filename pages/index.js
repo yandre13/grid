@@ -1,12 +1,25 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Grid from 'components/Grid'
 import Navbar from 'components/Navbar'
-import {Splide, SplideSlide} from 'splide-nextjs/react-splide'
-import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css'
+
 import Link from 'next/link'
 import CardHome from 'components/Card/CardHome'
 import Footer from 'components/Footer'
+
+import img1 from '../public/img/home_1.jpg'
+import img2 from '../public/img/home_2.jpg'
+import img3 from '../public/img/home_3.jpg'
+import img4 from '../public/img/home_4.jpg'
+
+import {Swiper, SwiperSlide} from 'swiper/react'
+import 'swiper/swiper.min.css'
+import 'swiper/components/navigation/navigation.min.css'
+import 'swiper/components/pagination/pagination.min.css'
+
+import SwiperCore, {Pagination, Zoom} from 'swiper/core'
+
+// install Swiper modules
+SwiperCore.use([Pagination, Zoom])
 
 export default function Home() {
 	return (
@@ -22,50 +35,35 @@ export default function Home() {
 					<Grid />
 					<div className="flex flex-wrap">
 						{/* ADS */}
-						<div className="w-full ">
-							<Splide
-								options={{
-									type: 'loop',
-									// speed: 700,
-									// autoplay: true,
-									// interval: 7000,
-									// pauseOnHover: false,
-									// pauseOnFocus: false,
-									arrows: false,
-									// rewind: true,
-									classes: {
-										pagination: 'splide__pagination hs', // container
-										page: 'splide__pagination__page splide_p-page', // each button
-									},
-								}}
-							>
-								<SplideSlide>
+						<div className="w-full z-0">
+							<Swiper pagination={{clickable: true}} loop>
+								<SwiperSlide>
 									<article className="w-full">
 										<div className="w-full h-0 overflow-hidden relative pb-[62.5%] md:pb-[53.28%] lg:pb-[54.42%] xl:pb-[51.69%]">
 											<img
 												src="/img/COVER.jpg"
 												alt=""
-												className="absolute top-0 w-full h-full"
+												className="absolute top-0 w-full h-full object-cover"
 												width={1920}
 												height={925}
 											/>
 										</div>
 									</article>
-								</SplideSlide>
-								<SplideSlide>
+								</SwiperSlide>
+								<SwiperSlide>
 									<article className="w-full">
 										<div className="w-full h-0 overflow-hidden relative pb-[62.5%] md:pb-[53.28%] lg:pb-[54.42%] xl:pb-[51.7272%]">
 											<img
 												src="/img/COVER.jpg"
 												alt=""
-												className="absolute top-0 w-full h-full"
+												className="absolute top-0 w-full h-full object-cover"
 												width={1920}
 												height={925}
 											/>
 										</div>
 									</article>
-								</SplideSlide>
-							</Splide>
+								</SwiperSlide>
+							</Swiper>
 						</div>
 
 						{/* imgs */}
@@ -75,7 +73,7 @@ export default function Home() {
 								md:w-[59.94%] md:ml-[13.32%] md:mt-[6.66%]
 								lg:w-[40.86%] lg:ml-[4.54%] lg:mr-[54.48%] lg:mt-[4.54%]
 								xl:w-[27.587%] xl:ml-[10.344%] xl:mr-0 xl:mt-[3.448%]"
-							image="/img/home_1.jpg"
+							image={img1}
 							aspectRatio="ar3x3"
 							title={['Proyecto casa&nbsp;A', 'Miraflores 2019']}
 						/>
@@ -85,7 +83,7 @@ export default function Home() {
 							md:w-[59.94%] md:ml-[13.32%] md:mt-[19.98%]
 							lg:w-[40.86%] lg:ml-[45.4%] lg:mt-[9.08%]
 							xl:w-[27.587%] xl:ml-[17.24%] xl:mt-[13.792%]"
-							image="/img/home_2.jpg"
+							image={img2}
 							aspectRatio="ar3x3"
 							title={['Proyecto casa&nbsp;B', 'Miraflores 2019']}
 							Component={
@@ -118,7 +116,7 @@ export default function Home() {
 							md:w-[59.94%] md:ml-[13.32%] md:mb-0 md:mt-[13.32%]
 							lg:w-[40.86%] lg:ml-[4.54%] lg:mr-[9.08%] lg:mt-[9.08%]
 							xl:w-[27.587%] xl:ml-[27.584%] xl:mr-0 xl:mt-[6.896%]"
-							image="/img/home_3.jpg"
+							image={img3}
 							aspectRatio="ar3x3"
 							title={['Proyecto casa&nbsp;C', 'Miraflores 2019']}
 						/>
@@ -126,7 +124,7 @@ export default function Home() {
 						<CardHome
 							classnames="hidden
 							xl:block xl:w-[27.587%] xl:ml-[13.792%] xl:mt-[-17.24%]"
-							image="/img/home_4.jpg"
+							image={img4}
 							aspectRatio="ar3x3"
 							title={['Proyecto casa&nbsp;D', 'Miraflores 2019']}
 						/>
@@ -174,7 +172,7 @@ export default function Home() {
 								<img
 									src="/img/FOOTER.jpg"
 									alt=""
-									className="absolute top-0 w-full h-full"
+									className="absolute top-0 w-full h-full object-cover"
 									width={1920}
 									height={925}
 								/>

@@ -14,7 +14,7 @@ function Grid() {
 				))}
 
 				<div className="absolute w-full h-full flex flex-col">
-					{Array.from(Array(70).keys()).map(e => (
+					{Array.from(Array(350).keys()).map(e => (
 						<div key={e} className="box-x md:md-box-x lg:lg-box-x xl:xl-box-x">
 							<div className="absolute w-full line-child-x"></div>
 						</div>
@@ -24,5 +24,5 @@ function Grid() {
 		</div>
 	)
 }
-
+Grid = React.memo(Grid)
 export default Grid

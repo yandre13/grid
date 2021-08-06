@@ -10,10 +10,12 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "framer-motion": "^4.1.16",
+    "jotai": "^1.2.2",
     "next": "^11.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "splide-nextjs": "^2.4.23"
+    "react-query": "^3.19.1",
+    "swiper": "^6.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

@@ -1,19 +1,45 @@
 import React from 'react'
-import CardPortfolio from 'components/Card/CardPortfolio'
 
-import image1 from '../../../public/img/img_grid_1.png'
-import image2 from '../../../public/img/img_grid_2.png'
-import image3 from '../../../public/img/img_grid_3.png'
-import image4 from '../../../public/img/img_grid_4.png'
-import image5 from '../../../public/img/img_grid_5.png'
-import image6 from '../../../public/img/img_grid_6.png'
-import image7 from '../../../public/img/img_grid_7.png'
-import image8 from '../../../public/img/img_grid_8.png'
+import {CardPortfolio} from 'components/Card/CardPortfolio'
 
-export default function ListPortfolio({selectedId}) {
+import {data} from 'data'
+
+export default function ListPortfolio() {
 	return (
 		<>
-			<CardPortfolio
+			{data.map(project => {
+				return <CardPortfolio key={project.id} project={project} />
+			})}
+			{/* <CardPortfolio id={1} image={image1}>
+				<CardPortfolioContents
+					classnames="w-[75%] ml-[12.5%] mt-[12.5%]
+					md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
+					lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
+					xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]"
+					aspectRatio="ar4x6"
+					title={['PROYECTO CASA A', 'Miraflores 2019']}
+				>
+					<CardPortfolioOpenButton>
+						<CardPortfolioImage />
+					</CardPortfolioOpenButton>
+				</CardPortfolioContents>
+			</CardPortfolio>
+
+			<CardPortfolio id={2} image={image2}>
+				<CardPortfolioContents
+					classnames="w-[75%] ml-[12.5%] mt-[12.5%]
+					md:w-[39.96%] md:ml-[6.66%] md:mt-[13.32%]
+					lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[9.08%]
+					xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[6.896%]"
+					aspectRatio="ar3x3"
+					title={['PROYECTO CASA B', 'Miraflores 2019']}
+				>
+					<CardPortfolioOpenButton>
+						<CardPortfolioImage />
+					</CardPortfolioOpenButton>
+				</CardPortfolioContents>
+			</CardPortfolio> */}
+			{/* <CardPortfolio
 				id={1}
 				classnames="w-[75%] ml-[12.5%] mt-[12.5%]
 					md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
@@ -107,7 +133,7 @@ export default function ListPortfolio({selectedId}) {
 				image={image8}
 				title={['PROYECTO CASA H', 'Miraflores 2019']}
 				isSelected={8 === selectedId}
-			/>
+			/> */}
 		</>
 	)
 }
