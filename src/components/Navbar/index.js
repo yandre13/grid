@@ -32,9 +32,11 @@ function Navbar() {
 				})}
 			>
 				<h2 className="font-semibold text-xl md:mt-1 xl:mt-2 md:mb-6 w-full">
-					<a>
-						<Logo color="black" classname="w-[35%] sm:w-[25%] md:w-[85%]" />
-					</a>
+					<Link href="/">
+						<a>
+							<Logo color="black" classname="w-[35%] sm:w-[25%] md:w-[85%]" />
+						</a>
+					</Link>
 				</h2>
 				<span
 					className={cn('flex items-center z-10 cursor-pointer', {
@@ -62,26 +64,26 @@ function Navbar() {
 					)}
 				>
 					<li className="py-3 md:py-1">
-						<Link href="/">
-							<a
-								className={cn(
-									'font-sec font-semibold text-sm',
-									{'hover:text-white': isMobile},
-									{'text-white': router.pathname === '/' && isMobile},
-								)}
-							>
-								Nosotros
-							</a>
-						</Link>
+						<a
+							className={cn(
+								'font-sec font-semibold text-sm',
+								{'hover:text-white': isMobile},
+								{'text-white': router.pathname === '/' && isMobile},
+							)}
+						>
+							Nosotros
+						</a>
 					</li>
 					<li className="py-3 md:py-1">
-						<a
-							className={cn('font-sec font-semibold text-sm', {
-								'hover:text-white': isMobile,
-							})}
-						>
-							Proyectos
-						</a>
+						<Link href="portafolio">
+							<a
+								className={cn('font-sec font-semibold text-sm', {
+									'hover:text-white': isMobile,
+								})}
+							>
+								Proyectos
+							</a>
+						</Link>
 					</li>
 					<li className="py-3 md:py-1">
 						<a
