@@ -26,19 +26,30 @@ function Item({id}) {
 	const [imageName, setImageName] = React.useState('')
 	const isMobile = useMedia('(max-width: 767px)')
 	const scrollRef = React.useRef(0)
+	// const [loaded, setLoaded] = React.useState(false)
 	React.useEffect(() => {
 		scrollRef.current = window?.scrollY
 		if (isMobile) {
 			document.body.style.position = 'fixed'
 			document.body.style.top = `-${scrollRef.current}px`
 		}
+		document.body.style.overflow = 'hidden'
 		return () => {
 			console.log(scrollRef.current)
 			document.body.style.position = ''
 			document.body.style.top = ''
+			document.body.style.overflow = ''
 			window.scrollTo(0, scrollRef.current ?? 0)
 		}
 	}, [isMobile])
+
+	// React.useEffect(() => {
+	// 	let timeout = setTimeout(() => {
+	// 		setLoaded(true)
+	// 	}, 500)
+	// 	return () => clearTimeout(timeout)
+	// }, [])
+
 	if (!project) {
 		return null
 	}
@@ -62,20 +73,48 @@ function Item({id}) {
 				// animate={{scale: [1, 1.2, 1]}}
 				// exit={{scale: 0.96, transition: {duration: 0.35}}}
 				// transition={{duration: 0.7, delay: 0.15}}
-				className="fixed top-0 left-0 h-[100vh] md:h-[90vh] w-full z-20
-				md:w-[72.4%] md:left-[20.9%] md:right-[6.7%] md:top-[7vw]
-				lg:w-[77%] lg:left-[17.8%] lg:right-[5.2%] lg:top-[5.2vw]
-				xl:w-[76.06%] xl:left-[16.67%] xl:right-[7.27%] xl:top-[4.3vw] 2xl:top-[4vw]"
+				className="fixed z-20 translate-middle
+				
+				xl:w-[98%] xl:top-[6%] xl:bottom-[5%] mx-auto"
 			>
-				<div className="relative w-full h-full bg-black flex flex-wrap">
+				<div className="relative w-full h-full flex flex-wrap">
 					{project.id && (
 						<>
-							<div className="w-full h-[55vh] md:h-[74vh] lg:w-[76%] lg:h-full bg-white">
+							<div
+								className="h-[45vh] md:h-[20vh] lg:h-[46%] w-full lg:w-[12%] mr-[3%]
+								p-8 md:p-8 lg:px-6
+							flex items-center flex-col md:flex-row lg:flex-col md:justify-between bg-black self-end"
+							>
+								<img
+									src={project.carousel.logo}
+									alt=""
+									className="h-auto !w-auto max-w-[160px]"
+									// layout="fill"
+									// width={1920}
+									// height={1440}
+								/>
+								<div className="text-right self-end md:self-auto lg:self-end mt-12 md:mt-0">
+									<h3 className="text-white text-base font-sec">
+										{project.title}
+									</h3>
+									<p className="text-white text-xs font-main mb-3">
+										{imageName}
+									</p>
+									<p className="text-white text-xs font-main leading-tight">
+										{project.place}
+									</p>
+									<p className="text-white text-xs font-main leading-tight">
+										{project.date}
+									</p>
+								</div>
+							</div>
+							<div className="w-full h-[55vh] md:h-[74vh] lg:w-[80.5%] mr-[4.5%] lg:h-full bg-white">
 								<motion.div
 									// animate={{opacity: [0.5, 1]}}
 									// exit={{opacity: 0.5, transition: {duration: 0.45}}}
 									// transition={{duration: 0.5, delay: 0.25}}
-									className="w-full h-full"
+									className="w-full h-full flex justify-center items-center"
+									// <div className="animate-spin bg-black w-6 h-6 self-center"></div>
 								>
 									<Swiper
 										pagination={{clickable: true}}
@@ -100,11 +139,11 @@ function Item({id}) {
 										{project.carousel.images.map(({path}) => (
 											<SwiperSlide key={path}>
 												<article className="w-full h-full">
-													<div className="w-full min-w-full h-full relative flex justify-center swiper-zoom-container">
+													<div className="flex justify-center swiper-zoom-container">
 														<img
 															src={path}
 															alt=""
-															className="h-full w-auto absolute top-0 !object-cover"
+															className="h-auto w-auto"
 															// layout="fill"
 															// width={1920}
 															// height={1440}
@@ -115,32 +154,6 @@ function Item({id}) {
 										))}
 									</Swiper>
 								</motion.div>
-							</div>
-							<div
-								className="h-[45vh] md:h-[20vh] lg:h-full w-full lg:w-[24%]
-								p-8 md:p-8 lg:px-6
-							flex items-center flex-col md:flex-row lg:flex-col md:justify-between"
-							>
-								<img
-									src={project.carousel.logo}
-									alt=""
-									className="h-auto !w-auto max-w-[160px]"
-									// layout="fill"
-									// width={1920}
-									// height={1440}
-								/>
-								<div className="text-right self-end md:self-auto lg:self-end mt-12 md:mt-0">
-									<h3 className="text-white text-2xl font-sec">
-										{project.title}
-									</h3>
-									<p className="text-white font-main mb-3">{imageName}</p>
-									<p className="text-white text-lg font-main leading-tight">
-										{project.place}
-									</p>
-									<p className="text-white text-lg font-main leading-tight">
-										{project.date}
-									</p>
-								</div>
 							</div>
 							<div
 								className="absolute rounded-full w-7 h-7 z-10

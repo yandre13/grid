@@ -137,17 +137,14 @@ body {
 	background: var(--grid-color);
 }
 
-.translate-z {
-	top: 0;
-	bottom: 0;
+.translate-middle {
 	left: 50%;
 	transform: translateX(-50%);
-	width: 100%;
 }
 .overlay {
 	z-index: 11;
 	position: fixed;
-	background: rgba(255, 255, 255, 0.6);
+	background: #fff;
 	will-change: opacity;
 	top: 0;
 	bottom: 0;
@@ -176,8 +173,8 @@ body {
 	height: 100%;
 }
 .swiper-pagination-bullet {
-	width: 14px !important;
-	height: 14px !important;
+	width: 13px !important;
+	height: 13px !important;
 	opacity: 0.6 !important;
 	background: rgba(255, 255, 255, 0.8) !important;
 }
@@ -194,14 +191,18 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
-	color: #fff !important;
-	font-weight: bold;
-	text-shadow: 0px 4px 14px rgba(0, 0, 0, 0.4);
+	color: #f2f2f2 !important;
+	opacity: 0.8;
+	font-weight: 300 !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	font-size: 32px !important;
 }
 
 .swiper-button-next {
-	right: 24px !important;
+	right: 34px !important;
 }
 .swiper-button-prev {
-	left: 24px !important;
+	left: 34px !important;
 }
