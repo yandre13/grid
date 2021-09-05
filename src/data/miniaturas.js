@@ -31,7 +31,7 @@ import image30 from '../../public/img/miniaturas/30.jpg'
 import image31 from '../../public/img/miniaturas/31.jpg'
 import image32 from '../../public/img/miniaturas/32.jpg'
 import image33 from '../../public/img/miniaturas/33.jpg'
-// import image34 from '../../public/img/miniaturas/34.jpg'
+import image34 from '../../public/img/miniaturas/34.jpg'
 import image35 from '../../public/img/miniaturas/35.jpg'
 import image36 from '../../public/img/miniaturas/36.jpg'
 import image37 from '../../public/img/miniaturas/37.jpg'
@@ -72,6 +72,7 @@ const miniaturas = {
 	image31,
 	image32,
 	image33,
+	image34,
 	image35,
 	image36,
 	image37,

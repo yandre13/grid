@@ -199,8 +199,8 @@ const data = [
 	},
 	{
 		id: 16,
-		title: 'No name',
-		place: 'No place.',
+		title: 'Oficina Birtranks',
+		place: '',
 		date: 'Diciembre 2020',
 		image: miniaturas.image16,
 		carousel: carousels.carousel16,
@@ -265,7 +265,7 @@ const data = [
 	{
 		id: 21,
 		title: 'Interiorismo',
-		place: 'No place.',
+		place: '',
 		date: '2019 - 2021',
 		image: miniaturas.image21,
 		carousel: carousels.carousel21,
@@ -330,7 +330,7 @@ const data = [
 	{
 		id: 26,
 		title: 'Maqueta',
-		place: 'No place.',
+		place: '',
 		date: 'Julio 2020',
 		image: miniaturas.image26,
 		carousel: carousels.carousel26,
@@ -369,7 +369,7 @@ const data = [
 	{
 		id: 29,
 		title: 'Académicos',
-		place: 'No place.',
+		place: '',
 		date: '2013 - 2021',
 		image: miniaturas.image29,
 		carousel: carousels.carousel29,
@@ -436,7 +436,7 @@ const data = [
 		title: 'Colmena',
 		place: 'Miraflores, Lima.',
 		date: 'Febrero 2020',
-		image: miniaturas.image33,
+		image: miniaturas.image34,
 		carousel: carousels.carousel34,
 		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
 		md:w-[39.96%] md:ml-[6.66%] md:mt-[-53.28%]
@@ -473,7 +473,7 @@ const data = [
 	{
 		id: 37,
 		title: 'Rodin 21',
-		place: 'No place.',
+		place: '',
 		date: 'Abril 2021',
 		image: miniaturas.image37,
 		carousel: carousels.carousel37,
