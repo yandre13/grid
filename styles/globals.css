@@ -25,24 +25,20 @@ body {
 .font-third {
 	font-family: serif;
 }
+.ar4x6 {
+	padding-bottom: 150%;
+}
 @layer utilities {
-	/*Img*/
-	.grid-img {
-		width: 75%;
+	/*Aspect ratio*/
+	.ar4x6 {
+		padding-bottom: 150%;
 	}
-
-	/*Grid*/
-	.box-y {
-		width: 0;
-		height: 100%;
-		padding-left: 12.5%;
+	.ar4x5 {
+		padding-bottom: 125%;
 	}
-	.box-x {
-		width: 100%;
-		height: 0;
-		padding-top: 12.5%;
+	.ar3x3 {
+		padding-bottom: 100%;
 	}
-
 	@variants responsive {
 		.clear-trs {
 			transform: none !important;
@@ -57,35 +53,6 @@ body {
 		}
 		.xl-grid-img {
 			width: 20.688%;
-		}
-		/*Aspect ratio*/
-		.ar4x6 {
-			padding-bottom: 150%;
-		}
-		.ar4x5 {
-			padding-bottom: 125%;
-		}
-		.ar3x3 {
-			padding-bottom: 100%;
-		}
-
-		.md-box-y {
-			padding-left: 6.66%;
-		}
-		.lg-box-y {
-			padding-left: 4.54%;
-		}
-		.xl-box-y {
-			padding-left: 3.448%;
-		}
-		.md-box-x {
-			padding-top: 6.66%;
-		}
-		.lg-box-x {
-			padding-top: 4.54%;
-		}
-		.xl-box-x {
-			padding-top: 3.448%;
 		}
 	}
 }
@@ -205,4 +172,9 @@ body {
 }
 .swiper-button-prev {
 	left: 34px !important;
+}
+
+.w-101 {
+	width: calc(100% + 1px) !important;
+	max-width: initial !important;
 }

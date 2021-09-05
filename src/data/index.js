@@ -9,11 +9,14 @@ const data = [
 		date: 'Abril 2021',
 		image: miniaturas.image1,
 		carousel: carousels.carousel1,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 2,
@@ -22,11 +25,14 @@ const data = [
 		date: 'Abril 2021',
 		image: miniaturas.image2,
 		carousel: carousels.carousel2,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 3,
@@ -35,11 +41,14 @@ const data = [
 		date: 'Junio 2021',
 		image: miniaturas.image3,
 		carousel: carousels.carousel3,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 4,
@@ -48,11 +57,14 @@ const data = [
 		date: 'Julio 2021',
 		image: miniaturas.image4,
 		carousel: carousels.carousel4,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-13.32%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: -2, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 5,
@@ -61,11 +73,14 @@ const data = [
 		date: 'Noviembre 2020',
 		image: miniaturas.image5,
 		carousel: carousels.carousel5,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: -2, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 6,
@@ -74,11 +89,14 @@ const data = [
 		date: 'Junio 2018',
 		image: miniaturas.image6,
 		carousel: carousels.carousel6,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-33.3%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-6.896%]`,
+		styles: {
+			xl: {mt: -2, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: -5, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 7,
@@ -87,11 +105,14 @@ const data = [
 		date: 'Julio 2020',
 		image: miniaturas.image7,
 		carousel: carousels.carousel7,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%] mb-0
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: -2, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 8,
@@ -100,11 +121,14 @@ const data = [
 		date: 'Marzo 2021',
 		image: miniaturas.image8,
 		carousel: carousels.carousel8,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-33.3%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-6.896%]`,
+		styles: {
+			xl: {mt: -2, ml: 1},
+			lg: {mt: -2, ml: 1},
+			md: {mt: -5, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 9,
@@ -113,11 +137,14 @@ const data = [
 		date: 'Noviembre 2019',
 		image: miniaturas.image9,
 		carousel: carousels.carousel9,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 10,
@@ -126,11 +153,14 @@ const data = [
 		date: 'Mayo 2018',
 		image: miniaturas.image10,
 		carousel: carousels.carousel10,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-33.3%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-6.896%]`,
+		styles: {
+			xl: {mt: -2, ml: 1},
+			lg: {mt: -2, ml: 1},
+			md: {mt: -5, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 11,
@@ -139,11 +169,14 @@ const data = [
 		date: 'Marzo 2021',
 		image: miniaturas.image11,
 		carousel: carousels.carousel11,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-6.896%]`,
+		styles: {
+			xl: {mt: -2, ml: 1},
+			lg: {mt: -2, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 12,
@@ -152,11 +185,14 @@ const data = [
 		date: 'Junio 2021',
 		image: miniaturas.image12,
 		carousel: carousels.carousel12,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-13.32%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-17.24%]`,
+		styles: {
+			xl: {mt: -5, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: -2, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 13,
@@ -165,11 +201,14 @@ const data = [
 		date: 'Agosto 2020',
 		image: miniaturas.image13,
 		carousel: carousels.carousel13,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: -2, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 14,
@@ -178,11 +217,14 @@ const data = [
 		date: 'Febrero 2021',
 		image: miniaturas.image14,
 		carousel: carousels.carousel14,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-22.7%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: -5, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 15,
@@ -191,11 +233,14 @@ const data = [
 		date: 'Diciembre 2020',
 		image: miniaturas.image15,
 		carousel: carousels.carousel15,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-6.896%]`,
+		styles: {
+			xl: {mt: -2, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 16,
@@ -204,11 +249,14 @@ const data = [
 		date: 'Diciembre 2020',
 		image: miniaturas.image16,
 		carousel: carousels.carousel16,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-13.32%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-6.896%]`,
+		styles: {
+			xl: {mt: -2, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: -2, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 17,
@@ -217,11 +265,14 @@ const data = [
 		date: 'Julio 2021',
 		image: miniaturas.image17,
 		carousel: carousels.carousel17,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-22.7%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: -5, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 18,
@@ -230,11 +281,14 @@ const data = [
 		date: 'Mayo 2021',
 		image: miniaturas.image18,
 		carousel: carousels.carousel18,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-6.896%]`,
+		styles: {
+			xl: {mt: -2, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 19,
@@ -243,11 +297,14 @@ const data = [
 		date: 'Febrero 2021',
 		image: miniaturas.image19,
 		carousel: carousels.carousel19,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-17.24%]`,
+		styles: {
+			xl: {mt: -5, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 20,
@@ -256,11 +313,14 @@ const data = [
 		date: 'Noviembre 2020',
 		image: miniaturas.image20,
 		carousel: carousels.carousel20,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-22.7%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-6.896%]`,
+		styles: {
+			xl: {mt: -2, ml: 1},
+			lg: {mt: -5, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 21,
@@ -269,11 +329,14 @@ const data = [
 		date: '2019 - 2021',
 		image: miniaturas.image21,
 		carousel: carousels.carousel21,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 22,
@@ -282,11 +345,14 @@ const data = [
 		date: 'Febrero 2021',
 		image: miniaturas.image22,
 		carousel: carousels.carousel22,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-13.32%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-6.896%]`,
+		styles: {
+			xl: {mt: -2, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: -2, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 23,
@@ -295,11 +361,14 @@ const data = [
 		date: 'Marzo 2021',
 		image: miniaturas.image23,
 		carousel: carousels.carousel23,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-17.24%]`,
+		styles: {
+			xl: {mt: -5, ml: 1},
+			lg: {mt: -8, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 24,
@@ -308,11 +377,14 @@ const data = [
 		date: 'Septiembre 2020',
 		image: miniaturas.image24,
 		carousel: carousels.carousel24,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-33.3%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-17.24%]`,
+		styles: {
+			xl: {mt: -5, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: -5, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 25,
@@ -321,11 +393,14 @@ const data = [
 		date: 'Febrero 2021',
 		image: miniaturas.image25,
 		carousel: carousels.carousel25,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: -2, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 26,
@@ -334,11 +409,14 @@ const data = [
 		date: 'Julio 2020',
 		image: miniaturas.image26,
 		carousel: carousels.carousel26,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-13.32%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-81.72%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-17.24%]`,
+		styles: {
+			xl: {mt: -5, ml: 1},
+			lg: {mt: -11, ml: 1},
+			md: {mt: -2, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 27,
@@ -347,11 +425,14 @@ const data = [
 		date: 'Febrero 2021',
 		image: miniaturas.image27,
 		carousel: carousels.carousel27,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-27.584%]`,
+		styles: {
+			xl: {mt: -8, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 28,
@@ -360,11 +441,14 @@ const data = [
 		date: 'Julio 2018',
 		image: miniaturas.image28,
 		carousel: carousels.carousel28,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-13.32%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-17.24%]`,
+		styles: {
+			xl: {mt: -5, ml: 1},
+			lg: {mt: -2, ml: 1},
+			md: {mt: -2, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 29,
@@ -373,11 +457,14 @@ const data = [
 		date: '2013 - 2021',
 		image: miniaturas.image29,
 		carousel: carousels.carousel29,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-49.94%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1},
+			lg: {mt: -11, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 30,
@@ -386,11 +473,14 @@ const data = [
 		date: 'Julio 2021',
 		image: miniaturas.image30,
 		carousel: carousels.carousel30,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-33.3%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-17.24%]`,
+		styles: {
+			xl: {mt: -5, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: -5, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 31,
@@ -399,11 +489,14 @@ const data = [
 		date: 'Junio 2021',
 		image: miniaturas.image31,
 		carousel: carousels.carousel31,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-22.7%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-27.584%]`,
+		styles: {
+			xl: {mt: -8, ml: 1},
+			lg: {mt: -5, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 32,
@@ -412,11 +505,14 @@ const data = [
 		date: 'Abril 2021',
 		image: miniaturas.image32,
 		carousel: carousels.carousel32,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-33.3%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-49.94%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-27.584%]`,
+		styles: {
+			xl: {mt: -8, ml: 1},
+			lg: {mt: -11, ml: 1},
+			md: {mt: -5, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 33,
@@ -425,11 +521,14 @@ const data = [
 		date: 'Junio 2020',
 		image: miniaturas.image33,
 		carousel: carousels.carousel33,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[3.448%]`,
+		styles: {
+			xl: {mt: 1, ml: 1, mb: -1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 34,
@@ -438,11 +537,14 @@ const data = [
 		date: 'Febrero 2020',
 		image: miniaturas.image34,
 		carousel: carousels.carousel34,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-53.28%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-9.08%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-17.24%]`,
+		styles: {
+			xl: {mt: -5, ml: 1},
+			lg: {mt: -2, ml: 1},
+			md: {mt: -8, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 35,
@@ -451,11 +553,14 @@ const data = [
 		date: 'Junio 2018',
 		image: miniaturas.image35,
 		carousel: carousels.carousel35,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-49.94%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-27.584%]`,
+		styles: {
+			xl: {mt: -8, ml: 1},
+			lg: {mt: -11, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 36,
@@ -464,11 +569,14 @@ const data = [
 		date: 'Marzo 2021',
 		image: miniaturas.image36,
 		carousel: carousels.carousel36,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-53.28%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-37.928%]`,
+		styles: {
+			xl: {mt: -11, ml: 1},
+			lg: {mt: 1, ml: 1},
+			md: {mt: -8, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 37,
@@ -477,11 +585,14 @@ const data = [
 		date: 'Abril 2021',
 		image: miniaturas.image37,
 		carousel: carousels.carousel37,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[6.66%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-22.7%]
-		xl:w-[20.688%] xl:ml-[27.584%] xl:mt-[-17.24%]`,
+		styles: {
+			xl: {mt: -4, ml: 8, mb: -2},
+			lg: {mt: -5, ml: 1},
+			md: {mt: 1, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 	{
 		id: 38,
@@ -490,11 +601,14 @@ const data = [
 		date: 'Diciembre 2020',
 		image: miniaturas.image38,
 		carousel: carousels.carousel38,
-		classnames: `w-[75%] ml-[12.5%] mt-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:mt-[-33.3%]
-		lg:w-[27.24%] lg:ml-[4.54%] lg:mt-[-63.56%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-27.584%] xl:mb-[3.448%]`,
+		styles: {
+			xl: {mt: -7, ml: 1, mb: 1},
+			lg: {mt: -14, ml: 1},
+			md: {mt: -5, ml: 1},
+			sm: {mt: 1, ml: 1},
+		},
 		aspectRatio: 'ar4x6',
+		height: 9,
 	},
 	{
 		id: 39,
@@ -503,11 +617,14 @@ const data = [
 		date: 'Octubre 2020',
 		image: miniaturas.image39,
 		carousel: carousels.carousel39,
-		classnames: `w-[75%] ml-[12.5%] my-[12.5%]
-		md:w-[39.96%] md:ml-[6.66%] md:my-[6.66%]
-		lg:w-[27.24%] lg:ml-[36.32%] lg:mt-[-22.7%] lg:mb-[4.54%]
-		xl:w-[20.688%] xl:ml-[3.448%] xl:mt-[-27.584%]`,
+		styles: {
+			xl: {mt: -7, ml: 1},
+			lg: {mt: -4, ml: -6, mb: 1},
+			md: {mt: 1, ml: 1, mb: 1},
+			sm: {mt: 1, ml: 1, mb: 1},
+		},
 		aspectRatio: 'ar3x3',
+		height: 6,
 	},
 ]
 

@@ -17,11 +17,13 @@ import 'swiper/components/navigation/navigation.min.css'
 import 'swiper/components/pagination/pagination.min.css'
 
 import SwiperCore, {Pagination, Zoom} from 'swiper/core'
+import {useAppWidth} from 'context'
 
 // install Swiper modules
 SwiperCore.use([Pagination, Zoom])
 
 export default function Home() {
+	const [width] = useAppWidth()
 	return (
 		<>
 			<Head>
@@ -39,7 +41,7 @@ export default function Home() {
 							<Swiper pagination={{clickable: true}} loop>
 								<SwiperSlide>
 									<article className="w-full">
-										<div className="w-full h-0 overflow-hidden relative pb-[62.5%] md:pb-[53.28%] lg:pb-[54.42%] xl:pb-[51.69%]">
+										<div className="w-full" style={{height: `${width * 15}px`}}>
 											<img
 												src="/img/COVER.jpg"
 												alt=""
@@ -74,6 +76,7 @@ export default function Home() {
 								lg:w-[40.86%] lg:ml-[4.54%] lg:mr-[54.48%] lg:mt-[4.54%]
 								xl:w-[27.587%] xl:ml-[10.344%] xl:mr-0 xl:mt-[3.448%]"
 							image={img1}
+							style={{height: `${width * 8}px`}}
 							aspectRatio="ar3x3"
 							title={['Proyecto casa&nbsp;A', 'Miraflores 2019']}
 						/>

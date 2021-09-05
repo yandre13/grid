@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import {QueryClient, QueryClientProvider} from 'react-query'
 import {Hydrate} from 'react-query/hydration'
 import {ReactQueryDevtools} from 'react-query/devtools'
+import {AppQueryProvider, AppWidthProvider} from 'context'
 
 function MyApp({Component, pageProps}) {
 	const [queryClient] = React.useState(
@@ -19,11 +20,21 @@ function MyApp({Component, pageProps}) {
 				},
 			}),
 	)
+	const [width, setWidth] = React.useState(0)
+
+	// sm: '540px',
+	// 		md: '768px',
+	// 		lg: '1048px',
+	// 		xl: '1280px',
 
 	return (
 		<QueryClientProvider client={queryClient}>
 			<Hydrate state={pageProps.dehydratedState}>
-				<Component {...pageProps} />
+				<AppWidthProvider>
+					<AppQueryProvider>
+						<Component {...pageProps} />
+					</AppQueryProvider>
+				</AppWidthProvider>
 			</Hydrate>
 			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>

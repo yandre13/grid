@@ -8,9 +8,10 @@ export default function CardHome({
 	image,
 	title = [],
 	Component,
+	...props
 }) {
 	return (
-		<div className={classnames}>
+		<div className={classnames} {...props}>
 			<div className={cn('w-full h-0 relative', aspectRatio)}>
 				<a href="#">
 					<Image
