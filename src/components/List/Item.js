@@ -18,15 +18,14 @@ import useMedia from 'hooks/useMedia'
 SwiperCore.use([Pagination, Navigation, Zoom])
 
 function Item({id}) {
-	const {data: project} = useQuery(['item', id], () =>
+	const {data: project, isLoading} = useQuery(['item', id], () =>
 		api.find(p => p.id === Number(id)),
 	)
-	// const project = React.useMemo(() => api.find(p => p.id === Number(id)), [id])
-	console.log(project)
+
 	const [imageName, setImageName] = React.useState('')
 	const isMobile = useMedia('(max-width: 767px)')
 	const scrollRef = React.useRef(0)
-	// const [loaded, setLoaded] = React.useState(false)
+	const [debouncedLoading, setDebouncedLoading] = React.useState(false)
 	React.useEffect(() => {
 		scrollRef.current = window?.scrollY
 		if (isMobile) {
@@ -43,12 +42,13 @@ function Item({id}) {
 		}
 	}, [isMobile])
 
-	// React.useEffect(() => {
-	// 	let timeout = setTimeout(() => {
-	// 		setLoaded(true)
-	// 	}, 500)
-	// 	return () => clearTimeout(timeout)
-	// }, [])
+	React.useEffect(() => {
+		isLoading && setDebouncedLoading(true)
+		let timeout = setTimeout(() => {
+			!isLoading && setDebouncedLoading(false)
+		}, 550)
+		return () => clearTimeout(timeout)
+	}, [isLoading])
 
 	if (!project) {
 		return null
@@ -114,7 +114,6 @@ function Item({id}) {
 									// exit={{opacity: 0.5, transition: {duration: 0.45}}}
 									// transition={{duration: 0.5, delay: 0.25}}
 									className="w-full h-full flex justify-center items-center"
-									// <div className="animate-spin bg-black w-6 h-6 self-center"></div>
 								>
 									<Swiper
 										pagination={{clickable: true}}
@@ -125,6 +124,9 @@ function Item({id}) {
 										onSwiper={() => {
 											setImageName(project.carousel.images[0]?.name)
 										}}
+										className={`transition-opacity duration-500 ${
+											debouncedLoading && 'opacity-0'
+										}`}
 										onSlideChange={e => {
 											console.log(e.activeIndex)
 											console.log(project.carousel.images.length)
