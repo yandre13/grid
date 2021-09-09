@@ -460,7 +460,7 @@ const carousel16 = {
 	images: [
 		{
 			name: 'Oficina BIRTRANKS',
-			path: '../../img/proyectos/16/OFICINA-BIRTRANKS.webp',
+			path: '../../img/proyectos/oficina-birtranks/OFICINA-BIRTRANKS.webp',
 			classnames: '',
 		},
 	],
