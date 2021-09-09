@@ -46,7 +46,7 @@ function Item({id}) {
 		isLoading && setDebouncedLoading(true)
 		let timeout = setTimeout(() => {
 			!isLoading && setDebouncedLoading(false)
-		}, 700)
+		}, 900)
 		return () => clearTimeout(timeout)
 	}, [isLoading])
 
