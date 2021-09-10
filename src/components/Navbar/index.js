@@ -22,11 +22,16 @@ function Navbar() {
 	const [open, setOpen] = React.useState(false)
 	return (
 		<header
-			className="mb-3 sm:mb-5 md:mb-0 flex flex-wrap md:block md:pl-2 lg:pl-3 w-full
-        md:w-[15%] md:h-[100vh]
-        lg:w-[13%] xl:w-[9.8%]"
+			className="mb-3 sm:mb-5 md:mb-0 flex flex-wrap w-full
+        md:w-[15%] md:h-[100vh] md:justify-center
+        lg:w-[13%] xl:w-[11%]"
 		>
-			<div className={cn(!isMobile && 'fixed', 'w-full flex flex-wrap')}>
+			<div
+				className={cn(
+					!isMobile && 'fixed',
+					'w-full md:w-auto flex md:flex-col flex-wrap',
+				)}
+			>
 				<div
 					className={cn('w-full order-1 md:order-first flex justify-between', {
 						'mt-2': open && isMobile,
@@ -57,7 +62,7 @@ function Navbar() {
 					animate={open ? 'visible' : 'hidden'}
 					initial="hidden"
 					className={cn(
-						'-mt-4 -ml-3 -mr-3 w-[calc(100%+6rem)] bg-black md:w-full md:bg-transparent md:m-0',
+						'-mt-4 -ml-3 -mr-3 w-[calc(100%+6rem)] bg-black md:w-[96px] lg:w-[106px] 2xl:w-[116px] md:bg-transparent md:m-0',
 						'md:clear-trs',
 					)}
 				>
@@ -67,7 +72,7 @@ function Navbar() {
 							'md:py-0 md:text-left md:text-black',
 						)}
 					>
-						<li className="py-3 md:py-1">
+						<li className="py-3 md:py-[3px]">
 							<a
 								className={cn(
 									'font-sec font-semibold text-xs',
@@ -78,7 +83,7 @@ function Navbar() {
 								Nosotros
 							</a>
 						</li>
-						<li className="py-3 md:py-1">
+						<li className="py-3 md:py-[3px]">
 							<Link href="portafolio">
 								<a
 									className={cn('font-sec font-semibold text-xs', {
@@ -89,7 +94,7 @@ function Navbar() {
 								</a>
 							</Link>
 						</li>
-						<li className="py-3 md:py-1">
+						<li className="py-3 md:py-[3px]">
 							<a
 								className={cn('font-sec font-semibold text-xs', {
 									'hover:text-white': isMobile,
@@ -98,7 +103,7 @@ function Navbar() {
 								Servicios
 							</a>
 						</li>
-						<li className="py-3 md:py-1">
+						<li className="py-3 md:py-[3px]">
 							<a
 								className={cn('font-sec font-semibold text-xs', {
 									'hover:text-white': isMobile,
