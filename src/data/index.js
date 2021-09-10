@@ -148,9 +148,9 @@ const data = [
 	},
 	{
 		id: 10,
-		title: 'Humanidades',
-		place: 'San Miguel, Lima.',
-		date: 'Mayo 2018',
+		title: 'R6000',
+		place: 'Miraflores, Lima.',
+		date: 'Marzo 2021',
 		image: miniaturas.image10,
 		carousel: carousels.carousel10,
 		styles: {
@@ -404,9 +404,9 @@ const data = [
 	},
 	{
 		id: 26,
-		title: 'Maqueta',
-		place: '',
-		date: 'Julio 2020',
+		title: 'Humanidades',
+		place: 'San Miguel, Lima.',
+		date: 'Mayo 2018',
 		image: miniaturas.image26,
 		carousel: carousels.carousel26,
 		styles: {

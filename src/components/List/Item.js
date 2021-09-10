@@ -10,12 +10,19 @@ import 'swiper/swiper.min.css'
 import 'swiper/components/zoom/zoom.min.css'
 import 'swiper/components/navigation/navigation.min.css'
 import 'swiper/components/pagination/pagination.min.css'
+import 'swiper/components/effect-fade/effect-fade.min.css'
 
-import SwiperCore, {Pagination, Navigation, Zoom} from 'swiper/core'
+import SwiperCore, {
+	Pagination,
+	Navigation,
+	Zoom,
+	EffectFade,
+	Keyboard,
+} from 'swiper/core'
 import useMedia from 'hooks/useMedia'
 
 // install Swiper modules
-SwiperCore.use([Pagination, Navigation, Zoom])
+SwiperCore.use([Pagination, Navigation, Zoom, EffectFade, Keyboard])
 
 function Item({id}) {
 	const {data: project, isLoading} = useQuery(['item', id], () =>
@@ -26,6 +33,7 @@ function Item({id}) {
 	const isMobile = useMedia('(max-width: 767px)')
 	const scrollRef = React.useRef(0)
 	const [debouncedLoading, setDebouncedLoading] = React.useState(false)
+	const linkRef = React.useRef()
 	React.useEffect(() => {
 		scrollRef.current = window?.scrollY
 		if (isMobile) {
@@ -50,6 +58,12 @@ function Item({id}) {
 		return () => clearTimeout(timeout)
 	}, [isLoading])
 
+	React.useEffect(() => {
+		const goTo = e => e.key === 'Escape' && linkRef.current.click()
+		window.addEventListener('keyup', goTo)
+		return () => window.removeEventListener('keyup', goTo)
+	}, [])
+
 	if (!project) {
 		return null
 	}
@@ -64,7 +78,7 @@ function Item({id}) {
 				className="overlay"
 			>
 				<Link href="/portafolio" scroll={false}>
-					<a></a>
+					<a ref={linkRef}></a>
 				</Link>
 			</motion.div>
 
@@ -118,6 +132,10 @@ function Item({id}) {
 									<Swiper
 										pagination={{clickable: true}}
 										loop={project.carousel.images.length > 1}
+										effect={'fade'}
+										keyboard={{
+											enabled: true,
+										}}
 										navigation
 										grabCursor
 										zoom
@@ -141,7 +159,7 @@ function Item({id}) {
 										{project.carousel.images.map(({path}) => (
 											<SwiperSlide key={path}>
 												<article className="w-full h-full">
-													<div className="flex justify-center swiper-zoom-container">
+													<div className="flex justify-center swiper-zoom-container bg-white">
 														<img
 															src={path}
 															alt=""

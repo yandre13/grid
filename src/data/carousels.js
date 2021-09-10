@@ -349,22 +349,32 @@ const carousel10 = {
 	images: [
 		{
 			name: 'Fachada',
-			path: '../../img/proyectos/humanidades/FACHADA.webp',
+			path: '../../img/proyectos/r6000/FACHADA.webp',
 			classnames: '',
 		},
 		{
 			name: 'Fachada lateral',
-			path: '../../img/proyectos/humanidades/FACHADA-LATERAL.webp',
+			path: '../../img/proyectos/r6000/FACHADA_LATERAL.webp',
 			classnames: '',
 		},
 		{
-			name: 'Oficinas',
-			path: '../../img/proyectos/humanidades/OFICINAS.webp',
+			name: 'Gym',
+			path: '../../img/proyectos/r6000/GYM.webp',
 			classnames: '',
 		},
 		{
-			name: 'Sum',
-			path: '../../img/proyectos/humanidades/SUM.webp',
+			name: 'Lobby oficinas',
+			path: '../../img/proyectos/r6000/LOBBY_OFICINAS.webp',
+			classnames: '',
+		},
+		{
+			name: 'Piscina',
+			path: '../../img/proyectos/r6000/PISCINA.webp',
+			classnames: '',
+		},
+		{
+			name: 'Estacionamiento bicicletas',
+			path: '../../img/proyectos/r6000/ESTACIONAMIENTO_BICICLETAS.webp',
 			classnames: '',
 		},
 	],
@@ -742,21 +752,26 @@ const carousel25 = {
 	],
 }
 const carousel26 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/Esteoeste.png',
 	images: [
 		{
-			name: '1',
-			path: '../../img/proyectos/maqueta/1.webp',
+			name: 'Fachada',
+			path: '../../img/proyectos/humanidades/FACHADA.webp',
 			classnames: '',
 		},
 		{
-			name: '2',
-			path: '../../img/proyectos/maqueta/2.webp',
+			name: 'Fachada lateral',
+			path: '../../img/proyectos/humanidades/FACHADA-LATERAL.webp',
 			classnames: '',
 		},
 		{
-			name: '3',
-			path: '../../img/proyectos/maqueta/3.webp',
+			name: 'Oficinas',
+			path: '../../img/proyectos/humanidades/OFICINAS.webp',
+			classnames: '',
+		},
+		{
+			name: 'Sum',
+			path: '../../img/proyectos/humanidades/SUM.webp',
 			classnames: '',
 		},
 	],
@@ -1139,6 +1154,27 @@ const carousel39 = {
 		{
 			name: 'Sala +2 doble altura',
 			path: '../../img/proyectos/numu/SALA--2-DOBLE-ALTURA.webp',
+			classnames: '',
+		},
+	],
+}
+
+const Maqueta = {
+	logo: '../../img/marcas/Marcan.png',
+	images: [
+		{
+			name: '1',
+			path: '../../img/proyectos/maqueta/1.webp',
+			classnames: '',
+		},
+		{
+			name: '2',
+			path: '../../img/proyectos/maqueta/2.webp',
+			classnames: '',
+		},
+		{
+			name: '3',
+			path: '../../img/proyectos/maqueta/3.webp',
 			classnames: '',
 		},
 	],
