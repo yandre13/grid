@@ -163,7 +163,7 @@ function Item({id}) {
 														<img
 															src={path}
 															alt=""
-															className="h-auto w-auto"
+															className="h-auto w-auto !max-w-[99%]"
 															// layout="fill"
 															// width={1920}
 															// height={1440}
