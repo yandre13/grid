@@ -142,7 +142,7 @@ function Item({id}) {
 										onSwiper={() => {
 											setImageName(project.carousel.images[0]?.name)
 										}}
-										className={`transition-opacity duration-300 ${
+										className={`transition-opacity duration-300 port_slider ${
 											debouncedLoading && 'opacity-0'
 										}`}
 										onSlideChange={e => {

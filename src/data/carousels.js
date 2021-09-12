@@ -16,6 +16,11 @@ const carousel2 = {
 			path: '../../img/proyectos/tamayo/flat.webp',
 			classnames: '',
 		},
+		{
+			name: 'Fachada',
+			path: '../../img/proyectos/tamayo/fachada.webp',
+			classnames: '',
+		},
 	],
 }
 const carousel3 = {
@@ -442,6 +447,26 @@ const carousel14 = {
 			path: '../../img/proyectos/ugarte-y-moscoso/LOBBY-BLOQUE-A.webp',
 			classnames: '',
 		},
+		{
+			name: 'Fachada bloque B',
+			path: '../../img/proyectos/ugarte-y-moscoso/FACHADA-BLOQUE-B.webp',
+			classnames: '',
+		},
+		{
+			name: 'Fachada bloque A',
+			path: '../../img/proyectos/ugarte-y-moscoso/FACHADA-BLOQUE-A.webp',
+			classnames: '',
+		},
+		{
+			name: 'Baño 1',
+			path: '../../img/proyectos/ugarte-y-moscoso/BANO-1.webp',
+			classnames: '',
+		},
+		{
+			name: 'Baño 2',
+			path: '../../img/proyectos/ugarte-y-moscoso/BANO-2.webp',
+			classnames: '',
+		},
 	],
 }
 const carousel15 = {
@@ -572,6 +597,21 @@ const carousel19 = {
 		{
 			name: 'Fachada bloque A',
 			path: '../../img/proyectos/ugarte-y-moscoso/FACHADA-BLOQUE-A.webp',
+			classnames: '',
+		},
+		{
+			name: 'Fachada bloque B',
+			path: '../../img/proyectos/ugarte-y-moscoso/FACHADA-BLOQUE-B.webp',
+			classnames: '',
+		},
+		{
+			name: 'Lobby bloque A',
+			path: '../../img/proyectos/ugarte-y-moscoso/LOBBY-BLOQUE-A.webp',
+			classnames: '',
+		},
+		{
+			name: 'Lobby bloque B',
+			path: '../../img/proyectos/ugarte-y-moscoso/LOBBY-BLOQUE-B.webp',
 			classnames: '',
 		},
 		{
@@ -747,6 +787,31 @@ const carousel25 = {
 		{
 			name: 'Fachada bloque B',
 			path: '../../img/proyectos/ugarte-y-moscoso/FACHADA-BLOQUE-B.webp',
+			classnames: '',
+		},
+		{
+			name: 'Fachada bloque A',
+			path: '../../img/proyectos/ugarte-y-moscoso/FACHADA-BLOQUE-A.webp',
+			classnames: '',
+		},
+		{
+			name: 'Lobby bloque A',
+			path: '../../img/proyectos/ugarte-y-moscoso/LOBBY-BLOQUE-A.webp',
+			classnames: '',
+		},
+		{
+			name: 'Lobby bloque B',
+			path: '../../img/proyectos/ugarte-y-moscoso/LOBBY-BLOQUE-B.webp',
+			classnames: '',
+		},
+		{
+			name: 'Baño 1',
+			path: '../../img/proyectos/ugarte-y-moscoso/BANO-1.webp',
+			classnames: '',
+		},
+		{
+			name: 'Baño 2',
+			path: '../../img/proyectos/ugarte-y-moscoso/BANO-2.webp',
 			classnames: '',
 		},
 	],
@@ -968,6 +1033,11 @@ const carousel32 = {
 		{
 			name: 'Fachada',
 			path: '../../img/proyectos/tamayo/fachada.webp',
+			classnames: '',
+		},
+		{
+			name: 'Flat',
+			path: '../../img/proyectos/tamayo/flat.webp',
 			classnames: '',
 		},
 	],

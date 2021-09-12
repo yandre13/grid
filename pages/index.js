@@ -38,10 +38,27 @@ export default function Home() {
 					<div className="flex flex-wrap">
 						{/* ADS */}
 						<div className="w-full z-0">
-							<Swiper pagination={{clickable: true}} loop>
+							<Swiper
+								pagination={{clickable: true}}
+								loop
+								className="home_slider"
+							>
 								<SwiperSlide>
 									<article className="w-full">
 										<div className="w-full" style={{height: `${width * 15}px`}}>
+											<img
+												src="/img/COVER.jpg"
+												alt=""
+												className="absolute top-0 w-full h-full object-cover"
+												width={1920}
+												height={925}
+											/>
+										</div>
+									</article>
+								</SwiperSlide>
+								<SwiperSlide>
+									<article className="w-full">
+										<div className="w-full h-0 overflow-hidden relative pb-[62.5%] md:pb-[53.28%] lg:pb-[54.42%] xl:pb-[51.7272%]">
 											<img
 												src="/img/COVER.jpg"
 												alt=""

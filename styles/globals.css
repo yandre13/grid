@@ -150,10 +150,22 @@ body {
 	opacity: 1 !important;
 	background: #fff !important;
 }
+.home_slider.swiper-container-horizontal
+	> .swiper-pagination-bullets
+	.swiper-pagination-bullet {
+	margin: 0 18px !important;
+}
+
 .swiper-container-horizontal
 	> .swiper-pagination-bullets
 	.swiper-pagination-bullet {
 	margin: 0 8px !important;
+}
+
+.port_slider.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 32px !important;
 }
 
 .swiper-button-next,
