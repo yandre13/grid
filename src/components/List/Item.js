@@ -96,18 +96,21 @@ function Item({id}) {
 						<>
 							<div
 								className="h-[45vh] md:h-[20vh] lg:h-[46%] w-full lg:w-[12%] mr-[3%]
-								p-8 md:p-8 lg:px-6
+								
 							flex items-center flex-col md:flex-row lg:flex-col md:justify-between bg-black self-end"
 							>
 								<img
 									src={project.carousel.logo}
 									alt=""
-									className="h-auto !w-auto max-w-[160px]"
+									className="h-auto w-full max-w-[160px]"
 									// layout="fill"
 									// width={1920}
 									// height={1440}
 								/>
-								<div className="text-right self-end md:self-auto lg:self-end mt-12 md:mt-0">
+								<div
+									className="text-right self-end md:self-auto lg:self-end mt-12 md:mt-0
+								p-8 md:p-8 lg:px-6"
+								>
 									<h3 className="text-white text-base font-sec">
 										{project.title}
 									</h3>
@@ -136,14 +139,14 @@ function Item({id}) {
 										keyboard={{
 											enabled: true,
 										}}
-										navigation
+										navigation={project.carousel.images.length > 1}
 										grabCursor
 										zoom
 										onSwiper={() => {
 											setImageName(project.carousel.images[0]?.name)
 										}}
 										className={`transition-opacity duration-300 port_slider ${
-											debouncedLoading && 'opacity-0'
+											debouncedLoading ? 'opacity-0' : ''
 										}`}
 										onSlideChange={e => {
 											console.log(e.activeIndex)

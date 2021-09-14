@@ -1,5 +1,5 @@
 const carousel1 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/MODULAR.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -9,7 +9,7 @@ const carousel1 = {
 	],
 }
 const carousel2 = {
-	logo: '../../img/marcas/Quispe-Y-Mamani.png',
+	logo: '../../img/marcas/QUISPE_MAMANI.jpg',
 	images: [
 		{
 			name: 'Flat',
@@ -24,7 +24,7 @@ const carousel2 = {
 	],
 }
 const carousel3 = {
-	logo: '../../img/marcas/VE-Arquitectura.png',
+	logo: '../../img/marcas/VE_ARQUITECTURA.jpg',
 	images: [
 		{
 			name: 'Nocturna',
@@ -39,7 +39,7 @@ const carousel3 = {
 	],
 }
 const carousel4 = {
-	logo: '../../img/marcas/Armando-Paredes.png',
+	logo: '../../img/marcas/ARMANDO_PAREDES.jpg',
 	images: [
 		{
 			name: 'Sala comedor',
@@ -79,7 +79,7 @@ const carousel4 = {
 	],
 }
 const carousel5 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/MARCAN.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -170,7 +170,7 @@ const carousel5 = {
 	],
 }
 const carousel6 = {
-	logo: '../../img/marcas/Esteoeste.png',
+	logo: '../../img/marcas/ESTEOESTE.jpg',
 	images: [
 		{
 			name: 'Bar',
@@ -195,7 +195,7 @@ const carousel6 = {
 	],
 }
 const carousel7 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/MARCAN.jpg',
 	images: [
 		{
 			name: 'Acercamiento fachada',
@@ -285,7 +285,7 @@ const carousel7 = {
 	],
 }
 const carousel8 = {
-	logo: '../../img/marcas/Armando-Paredes.png',
+	logo: '../../img/marcas/ARMANDO_PAREDES.jpg',
 	images: [
 		{
 			name: 'Ingreso',
@@ -320,7 +320,7 @@ const carousel8 = {
 	],
 }
 const carousel9 = {
-	logo: '../../img/marcas/Poggione-Biondi.png',
+	logo: '../../img/marcas/PB.jpeg',
 	images: [
 		{
 			name: 'Aérea',
@@ -350,7 +350,7 @@ const carousel9 = {
 	],
 }
 const carousel10 = {
-	logo: '../../img/marcas/Esteoeste.png',
+	logo: '../../img/marcas/MARCAN.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -385,7 +385,7 @@ const carousel10 = {
 	],
 }
 const carousel11 = {
-	logo: '../../img/marcas/Checor-Inmobiliaria.png',
+	logo: '../../img/marcas/CHECOR.jpg',
 	images: [
 		{
 			name: 'Cocina sala',
@@ -410,7 +410,7 @@ const carousel11 = {
 	],
 }
 const carousel12 = {
-	logo: '../../img/marcas/Libre-Inmobiliaria.png',
+	logo: '../../img/marcas/LIBRE.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -420,7 +420,7 @@ const carousel12 = {
 	],
 }
 const carousel13 = {
-	logo: '../../img/marcas/Quispe-Y-Mamani.png',
+	logo: '../../img/marcas/QUISPE_MAMANI.jpg',
 	images: [
 		{
 			name: 'Ingreso',
@@ -435,7 +435,7 @@ const carousel13 = {
 	],
 }
 const carousel14 = {
-	logo: '../../img/marcas/Armando-Paredes.png',
+	logo: '../../img/marcas/ARMANDO_PAREDES.jpg',
 	images: [
 		{
 			name: 'Lobby bloque B',
@@ -470,7 +470,7 @@ const carousel14 = {
 	],
 }
 const carousel15 = {
-	logo: '../../img/marcas/Soma-Lima.png',
+	logo: '../../img/marcas/SOMA_LIMA.jpg',
 	images: [
 		{
 			name: 'Frontal',
@@ -491,7 +491,7 @@ const carousel15 = {
 }
 
 const carousel16 = {
-	logo: '../../img/marcas/Soma-Lima.png',
+	logo: '../../img/marcas/ICONO.jpg',
 	images: [
 		{
 			name: 'Oficina BIRTRANKS',
@@ -502,7 +502,7 @@ const carousel16 = {
 }
 
 const carousel17 = {
-	logo: '../../img/marcas/Armonhy-Inmobiliari.png',
+	logo: '../../img/marcas/ARMONHY.jpg',
 	images: [
 		{
 			name: 'Lateral',
@@ -557,7 +557,7 @@ const carousel17 = {
 	],
 }
 const carousel18 = {
-	logo: '../../img/marcas/Armando-Paredes.png',
+	logo: '../../img/marcas/ARMANDO_PAREDES.jpg',
 	images: [
 		{
 			name: 'Ingreso',
@@ -592,7 +592,7 @@ const carousel18 = {
 	],
 }
 const carousel19 = {
-	logo: '../../img/marcas/Armando-Paredes.png',
+	logo: '../../img/marcas/ARMANDO_PAREDES.jpg',
 	images: [
 		{
 			name: 'Fachada bloque A',
@@ -627,7 +627,7 @@ const carousel19 = {
 	],
 }
 const carousel20 = {
-	logo: '../../img/marcas/Borasino-Arquitectos.png',
+	logo: '../../img/marcas/OB_RA.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -652,7 +652,7 @@ const carousel20 = {
 	],
 }
 const carousel21 = {
-	logo: '../../img/marcas/Borasino-Arquitectos.png',
+	logo: '../../img/marcas/falta.jpg',
 	images: [
 		{
 			name: 'Dormitorio',
@@ -697,7 +697,7 @@ const carousel21 = {
 	],
 }
 const carousel22 = {
-	logo: '../../img/marcas/Soma-Lima.png',
+	logo: '../../img/marcas/SOMA_LIMA.jpg',
 	images: [
 		{
 			name: 'Ingreso',
@@ -717,7 +717,7 @@ const carousel22 = {
 	],
 }
 const carousel23 = {
-	logo: '../../img/marcas/VE-Arquitectura.png',
+	logo: '../../img/marcas/VE_ARQUITECTURA.jpg',
 	images: [
 		{
 			name: 'Terrazas v1',
@@ -762,7 +762,7 @@ const carousel23 = {
 	],
 }
 const carousel24 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/MARCAN.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -782,7 +782,7 @@ const carousel24 = {
 	],
 }
 const carousel25 = {
-	logo: '../../img/marcas/Armando-Paredes.png',
+	logo: '../../img/marcas/ARMANDO_PAREDES.jpg',
 	images: [
 		{
 			name: 'Fachada bloque B',
@@ -817,7 +817,7 @@ const carousel25 = {
 	],
 }
 const carousel26 = {
-	logo: '../../img/marcas/Esteoeste.png',
+	logo: '../../img/marcas/ESTEOESTE.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -842,7 +842,7 @@ const carousel26 = {
 	],
 }
 const carousel27 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/PUENTE.jpg',
 	images: [
 		{
 			name: 'Corredor',
@@ -882,7 +882,7 @@ const carousel27 = {
 	],
 }
 const carousel28 = {
-	logo: '../../img/marcas/Dessin-Technisch.png',
+	logo: '../../img/marcas/DESSIN.jpg',
 	images: [
 		{
 			name: 'Vista B',
@@ -897,7 +897,7 @@ const carousel28 = {
 	],
 }
 const carousel29 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/falta.jpg',
 	images: [
 		{
 			name: 'Estación',
@@ -967,7 +967,7 @@ const carousel29 = {
 	],
 }
 const carousel30 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/VCV_DESIGN.jpg',
 	images: [
 		{
 			name: 'Vista dormitorio',
@@ -1013,7 +1013,7 @@ const carousel30 = {
 }
 
 const carousel31 = {
-	logo: '../../img/marcas/2k--Inmobiiliaria.png',
+	logo: '../../img/marcas/2k.jpg',
 	images: [
 		{
 			name: 'Bello Horizonte fachada nocturna',
@@ -1028,7 +1028,7 @@ const carousel31 = {
 	],
 }
 const carousel32 = {
-	logo: '../../img/marcas/Quispe-Y-Mamani.png',
+	logo: '../../img/marcas/QUISPE_MAMANI.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -1043,7 +1043,7 @@ const carousel32 = {
 	],
 }
 const carousel33 = {
-	logo: '../../img/marcas/Soma-Lima.png',
+	logo: '../../img/marcas/SOMA_LIMA.jpg',
 	images: [
 		{
 			name: 'Sala de TV',
@@ -1078,7 +1078,7 @@ const carousel33 = {
 	],
 }
 const carousel34 = {
-	logo: '../../img/marcas/VOid-Arquitectos.png',
+	logo: '../../img/marcas/VOID.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -1088,7 +1088,7 @@ const carousel34 = {
 	],
 }
 const carousel35 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/VCV_DESIGN.jpg',
 	images: [
 		{
 			name: 'Barra',
@@ -1103,7 +1103,7 @@ const carousel35 = {
 	],
 }
 const carousel36 = {
-	logo: '../../img/marcas/Grupo-Mecano.png',
+	logo: '../../img/marcas/URBA.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -1114,7 +1114,7 @@ const carousel36 = {
 }
 
 const carousel37 = {
-	logo: '../../img/marcas/Linea-21.png',
+	logo: '../../img/marcas/LINEA_21.jpg',
 	images: [
 		{
 			name: 'Estacionamiento bicicletas',
@@ -1144,7 +1144,7 @@ const carousel37 = {
 	],
 }
 const carousel38 = {
-	logo: '../../img/marcas/Armonhy-Inmobiliari.png',
+	logo: '../../img/marcas/ARMONHY.jpg',
 	images: [
 		{
 			name: 'Fachada',
@@ -1189,7 +1189,7 @@ const carousel38 = {
 	],
 }
 const carousel39 = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/HUDTWALCKER.jpg',
 	images: [
 		{
 			name: 'Puente',
@@ -1230,7 +1230,7 @@ const carousel39 = {
 }
 
 const Maqueta = {
-	logo: '../../img/marcas/Marcan.png',
+	logo: '../../img/marcas/MARCAN.jpg',
 	images: [
 		{
 			name: '1',
