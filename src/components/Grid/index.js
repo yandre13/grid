@@ -1,7 +1,7 @@
 import {useAppQuery, useAppWidth} from 'context'
 import React from 'react'
 
-function Grid() {
+function Grid({hidden = false}) {
 	const gridRef = React.useRef()
 	const query = useAppQuery()
 	const [width, dispatch] = useAppWidth()
@@ -35,14 +35,14 @@ function Grid() {
 			<div className="h-full w-full relative flex flex-wrap">
 				{Array.from(Array(29).keys()).map(e => (
 					<div key={e} style={{width}}>
-						<div className="absolute h-full line-child-y"></div>
+						{!hidden && <div className="absolute h-full line-child-y"></div>}
 					</div>
 				))}
 
 				<div className="absolute w-full flex flex-col">
 					{Array.from(Array(350).keys()).map(e => (
 						<div key={e} style={{height: width}}>
-							<div className="absolute w-full line-child-x"></div>
+							{!hidden && <div className="absolute w-full line-child-x"></div>}
 						</div>
 					))}
 				</div>

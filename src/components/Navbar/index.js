@@ -106,13 +106,15 @@ function Navbar() {
 							</a>
 						</li>
 						<li className="py-3 md:py-[3px]">
-							<a
-								className={cn('font-sec font-semibold text-xs', {
-									'hover:text-white': isMobile,
-								})}
-							>
-								Contacto
-							</a>
+							<Link href="contacto">
+								<a
+									className={cn('font-sec font-semibold text-xs', {
+										'hover:text-white': isMobile,
+									})}
+								>
+									Contacto
+								</a>
+							</Link>
 						</li>
 					</ul>
 				</motion.nav>
