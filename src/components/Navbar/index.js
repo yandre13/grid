@@ -73,15 +73,17 @@ function Navbar() {
 						)}
 					>
 						<li className="py-3 md:py-[3px]">
-							<a
-								className={cn(
-									'font-sec font-semibold text-xs',
-									{'hover:text-white': isMobile},
-									{'text-white': router.pathname === '/' && isMobile},
-								)}
-							>
-								Nosotros
-							</a>
+							<Link href="nosotros">
+								<a
+									className={cn(
+										'font-sec font-semibold text-xs',
+										{'hover:text-white': isMobile},
+										{'text-white': router.pathname === '/' && isMobile},
+									)}
+								>
+									Nosotros
+								</a>
+							</Link>
 						</li>
 						<li className="py-3 md:py-[3px]">
 							<Link href="portafolio">
