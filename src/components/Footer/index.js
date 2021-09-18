@@ -4,116 +4,93 @@ import Logo from '../svgs/Logo'
 export default function index() {
 	return (
 		<footer className="bg-black w-[calc(100%+1.5rem)] md:w-full z-10 absolute -mx-3 md:mx-0">
-			<section className="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-8">
+			<section className="w-[90%] lg:w-[72%] mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-8">
 				<div className="pt-10 pb-5 xl:py-10">
-					<h3 className="font-main text-xl font-medium text-white mb-3 md:mb-6">
-						Services
+					<h3 className="font-sec font-medium text-white mb-3 md:mb-5">
+						Conversemos.
 					</h3>
 					<ul>
-						<li className="mb-2 font-main text-sm text-gray-300">Rendering</li>
-						<li className="mb-2 font-main text-sm text-gray-300">
-							Virtual Readity
+						<li className="mb-4 font-main text-sm text-gray-300">
+							<a href="mailto:contacto@visualiza.pe">contacto@visualiza.pe</a>
 						</li>
-						<li className="mb-2 font-main text-sm text-gray-300">
-							Photorealism
+						<li className="mb-8 font-main text-sm text-gray-300">
+							<a href="tel:+51956453424">+51 956 453 424</a>
 						</li>
-						<li className="font-main text-sm text-gray-300">Illustration</li>
+						<li className="mb-1 font-main text-sm text-gray-300">
+							Avenida dos de mayo 1830
+						</li>
+						<li className="font-main text-sm text-gray-300">
+							San Isidro 17056
+						</li>
+						<li className="font-main text-sm text-gray-300">Lima - Perú</li>
 					</ul>
 				</div>
 				<div className="py-5 sm:pt-10 xl:py-10">
-					<h3 className="font-main text-xl font-medium text-white mb-3 md:mb-6">
-						Information
+					<h3 className="font-sec font-medium text-white mb-3 md:mb-5">
+						Servicios.
 					</h3>
-					<p className="font-main text-sm text-gray-300">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					</p>
-					<a
-						href="#"
-						className="block w-full lg:w-[90%] font-main text-base text-gray-300 px-6 py-[6px] border border-gray-300 text-center mt-4"
-					>
-						Read more
-					</a>
+					<ul>
+						<li className="mb-1 font-main text-sm text-gray-300">
+							Modelado 3D
+						</li>
+						<li className="mb-1 font-main text-sm text-gray-300">
+							Visualización arquitectónica
+						</li>
+						<li className="mb-1 font-main text-sm text-gray-300">Tour 360</li>
+						<li className="mb-1 font-main text-sm text-gray-300">
+							Fotografía áerea
+						</li>
+						<li className="mb-1 font-main text-sm text-gray-300">
+							Recorridos virtuales
+						</li>
+						<li className="mb-1 font-main text-sm text-gray-300">
+							Marketing inmobiliario
+						</li>
+					</ul>
 				</div>
 				<div className="py-5 xl:py-10">
-					<h3 className="font-main text-xl font-medium text-white mb-3 md:mb-6">
-						Social media
+					<h3 className="font-sec text-base font-medium text-white mb-3 md:mb-5">
+						Descúbrenos.
 					</h3>
 					<div className="flex">
-						<div className="mr-4">
+						<div className="mr-6">
 							<img
-								width="38"
-								height="38"
-								src="/img/facebook-filled.svg"
-								alt="next"
+								width="20"
+								height="20"
+								src="/img/icons/ig.png"
+								alt="Instagram"
 							/>
 						</div>
-						<div className="mr-4">
+						<div className="mr-6">
 							<img
-								width="38"
-								height="38"
-								src="/img/instagram-filled.svg"
-								alt="next"
+								width="20"
+								height="20"
+								src="/img/icons/fb.png"
+								alt="Facebook"
+							/>
+						</div>
+						<div className="mr-6">
+							<img
+								width="20"
+								height="20"
+								src="/img/icons/in.png"
+								alt="LinkedIn"
 							/>
 						</div>
 						<div>
 							<img
-								width="38"
-								height="38"
-								src="/img/youtube-filled.svg"
-								alt="next"
+								width="20"
+								height="20"
+								src="/img/icons/yt.png"
+								alt="YouTube"
 							/>
 						</div>
 					</div>
 				</div>
-				<div className="py-5 xl:py-10">
-					<h3 className="font-main text-xl font-medium text-white mb-3 md:mb-6">
-						Contact
-					</h3>
-					<form action="#">
-						<div>
-							<input
-								type="email"
-								placeholder="Email"
-								className="w-full bg-transparent text-sm placeholder-gray-300
-                                py-1 px-4 mb-3 border border-gray-300 text-gray-200 rounded-none"
-							/>
-						</div>
-						<div>
-							<input
-								type="text"
-								placeholder="Name / Nombre"
-								className="w-full bg-transparent text-sm placeholder-gray-300
-                                py-1 px-4 mb-3 border border-gray-300 text-gray-200 rounded-none"
-							/>
-						</div>
-						<div>
-							<input
-								type="text"
-								placeholder="Subject / Asunto"
-								className="w-full bg-transparent text-sm placeholder-gray-300
-                                py-1 px-4 mb-3 border border-gray-300 text-gray-200 rounded-none"
-							/>
-						</div>
-						<div>
-							<textarea
-								rows="3"
-								placeholder="Message / Mensaje"
-								className="w-full bg-transparent text-sm placeholder-gray-300
-                                py-1 px-4 mb-3 border border-gray-300 text-gray-200 rounded-none"
-							></textarea>
-						</div>
-						<div>
-							<a
-								href="#"
-								className="block w-full font-main text-sm text-gray-300 px-6 py-[6px] border border-gray-300 text-center"
-							>
-								Submit / Enviar
-							</a>
-						</div>
-					</form>
-				</div>
-				<div className="row-end-7 mt-6 xl:-mt-8 pb-8">
-					<Logo color="white" classname="w-[40%] sm:w-[50%]" />
+				<div className="py-5 xl:py-10 flex justify-center">
+					<div className="self-end">
+						<Logo color="white" classname="w-32" />
+					</div>
 				</div>
 			</section>
 		</footer>
