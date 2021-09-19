@@ -72,7 +72,12 @@ export default function Home() {
 								marginTop: width,
 							}}
 						>
-							<h3 className="font-sec text-lg pt-5 pl-1">Nuestros clientes.</h3>
+							<h3
+								className="font-sec text-lg pl-1"
+								style={{height: width, paddingTop: width / 2}}
+							>
+								Nuestros clientes.
+							</h3>
 							<div
 								className="flex flex-wrap"
 								style={{marginTop: width, columnGap: width}}
