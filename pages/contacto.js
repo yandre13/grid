@@ -4,7 +4,7 @@ import Navbar from 'components/Navbar'
 
 import Image from 'next/image'
 
-import banner from '../public/img/contacto.jpg'
+import banner from '../public/img/contacto.png'
 
 import {useAppWidth} from 'context'
 
@@ -24,12 +24,12 @@ export default function Home() {
 					<div className="flex flex-wrap">
 						{/* imgs */}
 						<h1
-							className="font-sec text-3xl leading-tight"
+							className="font-sec text-3xl pl-1"
 							style={{
 								width: `${width * 24}px`,
 								height: `${width * 1}px`,
 								marginLeft: `${width * 2}px`,
-								marginTop: `${width * 0.7}px`,
+								marginTop: `${width * 1}px`,
 							}}
 						>
 							Conversemos.
