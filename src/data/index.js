@@ -564,7 +564,7 @@ const data = [
 	},
 	{
 		id: 36,
-		title: 'Larapa',
+		title: 'Villasol',
 		place: 'Cuzco.',
 		date: 'Marzo 2021',
 		image: miniaturas.image36,
