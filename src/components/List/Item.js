@@ -15,14 +15,13 @@ import 'swiper/components/effect-fade/effect-fade.min.css'
 import SwiperCore, {
 	Pagination,
 	Navigation,
-	Zoom,
 	EffectFade,
 	Keyboard,
 } from 'swiper/core'
 import useMedia from 'hooks/useMedia'
 
 // install Swiper modules
-SwiperCore.use([Pagination, Navigation, Zoom, EffectFade, Keyboard])
+SwiperCore.use([Pagination, Navigation, EffectFade, Keyboard])
 
 function Item({id}) {
 	const {data: project, isLoading} = useQuery(['item', id], () =>
