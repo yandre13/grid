@@ -1213,7 +1213,7 @@ const carousel39 = {
 		},
 		{
 			name: 'Sala 1',
-			path: '../../img/proyectos/numu/SALA -1.webp',
+			path: '../../img/proyectos/numu/SALA-1.webp',
 			classnames: '',
 		},
 		{
