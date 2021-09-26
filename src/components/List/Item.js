@@ -161,7 +161,7 @@ function Item({id}) {
 										{project.carousel.images.map(({path}) => (
 											<SwiperSlide key={path}>
 												<article className="w-full h-full">
-													<div className="flex justify-center swiper-zoom-container bg-white">
+													<div className="flex justify-center vertical-center bg-white">
 														<img
 															src={path}
 															alt=""
