@@ -7,7 +7,7 @@ import Footer from 'components/Footer'
 
 import banner from '../public/img/oficina.jpg'
 
-import { useAppWidth } from 'context'
+import {useAppWidth} from 'context'
 import Logo from 'components/svgs/Logo'
 import logos from 'data/logos'
 export default function Home() {
@@ -45,18 +45,39 @@ export default function Home() {
 							}}
 							className="pl-3"
 						>
-							<h1 style={{height: width * 2}} className="flex flex-col font-sec text-[40px] leading-tight">
+							<h1
+								style={{height: width * 2}}
+								className="flex flex-col font-sec text-[40px] leading-tight"
+							>
 								Somos{' '}
 								<Logo
 									color="black"
 									classname="w-[106px] md:w-[96px] lg:w-[106px] 2xl:w-[216px]"
 								/>
 							</h1>
-							<p style={{ marginTop: `${width * 3}px`, lineHeight: 1.14, fontSize: 15 }} className="pt-3">
-								Somos un equipo multidisciplinario de arquitectos, diseñadores y artistas.
-								Todos enamorados del arte digital y la visualización en tres dimensiones.
-								Disfrutamos que los proyectos sean un reto, que nos exijan aprender constantemente. Queremos que nos busquen por un resultado único, una metodología innovadora, y el aporte creativo en todo el proceso. Creemos en la oportunidad de plasmar espacios aun no existentes y contar una historia en ellos.
-								<br />Compromiso, comunicación y pasión son partes fundamentales de cada proyecto. Amamos lo que hacemos. <br />
+							<p
+								style={{
+									marginTop: `${width * 3}px`,
+									lineHeight: 1.14,
+									fontSize: 17,
+								}}
+								className="pt-4"
+							>
+								Somos un equipo multidisciplinario de arquitectos, diseñadores y
+								artistas.
+								<br />
+								Todos enamorados del arte digital y la visualización en tres
+								dimensiones.
+								<br />
+								Disfrutamos que los proyectos sean un reto, que nos exijan
+								aprender constantemente. Queremos que nos busquen por un
+								resultado único, una metodología innovadora, y el aporte
+								creativo en todo el proceso. Creemos en la oportunidad de
+								plasmar espacios aun no existentes y contar una historia en
+								ellos.
+								<br />
+								Compromiso, comunicación y pasión son partes fundamentales de
+								cada proyecto. Amamos lo que hacemos. <br />
 								Es así de simple.
 							</p>
 						</div>
@@ -70,15 +91,15 @@ export default function Home() {
 						>
 							<h3
 								className="font-sec text-lg pl-1"
-								style={{ height: width, paddingTop: width / 2 }}
+								style={{height: width, paddingTop: width / 2}}
 							>
 								Nuestros clientes.
 							</h3>
 							<div
 								className="flex flex-wrap"
-								style={{ marginTop: width, columnGap: width }}
+								style={{marginTop: width, columnGap: width}}
 							>
-								{logos.map(({ logo, alt }) => (
+								{logos.map(({logo, alt}) => (
 									<div
 										style={{
 											width: `${width * 3}px`,
