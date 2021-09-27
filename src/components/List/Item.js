@@ -7,7 +7,6 @@ import {useQuery} from 'react-query'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/swiper.min.css'
-import 'swiper/components/zoom/zoom.min.css'
 import 'swiper/components/navigation/navigation.min.css'
 import 'swiper/components/pagination/pagination.min.css'
 import 'swiper/components/effect-fade/effect-fade.min.css'
@@ -140,7 +139,6 @@ function Item({id}) {
 										}}
 										navigation={project.carousel.images.length > 1}
 										grabCursor
-										zoom
 										onSwiper={() => {
 											setImageName(project.carousel.images[0]?.name)
 										}}
