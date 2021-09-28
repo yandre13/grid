@@ -7,19 +7,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Trirong:ital,wght@1,100;1,200;1,300;1,400&display=swap');
+@font-face {
+	font-family: 'AtypBLDisplay-Regular';
+	src: url('/fonts/AtypBLDisplay-Regular.otf');
+}
+@font-face {
+	font-family: 'Athelas-Italic';
+	src: url('/fonts/Athelas-Italic.ttf');
+}
 html,
 body {
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'AtypBLDisplay-Regular', 'DM Sans', sans-serif;
 }
 
 :root {
 	--grid-color: rgba(0, 0, 0, 0.3);
 }
 .font-main {
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'AtypBLDisplay-Regular', 'DM Sans', sans-serif;
 }
 .font-sec {
-	font-family: 'Trirong', serif;
+	font-family: 'Athelas-Italic', 'Trirong', serif;
 	font-style: italic;
 }
 .font-third {
