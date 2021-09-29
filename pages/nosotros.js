@@ -46,15 +46,17 @@ export default function Home() {
 							className="pl-3"
 						>
 							<h1
-								style={{height: width * 2}}
-								className="flex flex-col font-sec text-[40px] leading-tight"
+								style={{height: width}}
+								className="flex flex-col font-sec text-5xl"
 							>
-								Somos{' '}
+								Somos
+							</h1>
+							<h2 style={{height: width}}>
 								<Logo
 									color="black"
 									classname="w-[106px] md:w-[96px] lg:w-[106px] 2xl:w-[216px]"
 								/>
-							</h1>
+							</h2>
 							<p
 								style={{
 									marginTop: `${width * 3}px`,
@@ -90,7 +92,7 @@ export default function Home() {
 							}}
 						>
 							<h3
-								className="font-sec text-lg pl-1"
+								className="font-sec text-xl pl-1"
 								style={{height: width, paddingTop: width / 2}}
 							>
 								Nuestros clientes.

@@ -76,7 +76,7 @@ function Navbar() {
 							<Link href="nosotros">
 								<a
 									className={cn(
-										'font-sec font-semibold text-xs',
+										'font-sec font-semibold text-sm',
 										{'hover:text-white': isMobile},
 										{'text-white': router.pathname === '/' && isMobile},
 									)}
@@ -88,7 +88,7 @@ function Navbar() {
 						<li className="py-3 md:py-[3px]">
 							<Link href="portafolio">
 								<a
-									className={cn('font-sec font-semibold text-xs', {
+									className={cn('font-sec font-semibold text-sm', {
 										'hover:text-white': isMobile,
 									})}
 								>
@@ -98,7 +98,7 @@ function Navbar() {
 						</li>
 						<li className="py-3 md:py-[3px]">
 							<a
-								className={cn('font-sec font-semibold text-xs', {
+								className={cn('font-sec font-semibold text-sm', {
 									'hover:text-white': isMobile,
 								})}
 							>
@@ -108,7 +108,7 @@ function Navbar() {
 						<li className="py-3 md:py-[3px]">
 							<Link href="contacto">
 								<a
-									className={cn('font-sec font-semibold text-xs', {
+									className={cn('font-sec font-semibold text-sm', {
 										'hover:text-white': isMobile,
 									})}
 								>
