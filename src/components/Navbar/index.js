@@ -73,6 +73,17 @@ function Navbar() {
 						)}
 					>
 						<li className="py-3 md:py-[3px]">
+							<Link href="portafolio">
+								<a
+									className={cn('font-sec font-semibold text-sm', {
+										'hover:text-white': isMobile,
+									})}
+								>
+									Proyectos
+								</a>
+							</Link>
+						</li>
+						<li className="py-3 md:py-[3px]">
 							<Link href="nosotros">
 								<a
 									className={cn(
@@ -82,17 +93,6 @@ function Navbar() {
 									)}
 								>
 									Nosotros
-								</a>
-							</Link>
-						</li>
-						<li className="py-3 md:py-[3px]">
-							<Link href="portafolio">
-								<a
-									className={cn('font-sec font-semibold text-sm', {
-										'hover:text-white': isMobile,
-									})}
-								>
-									Proyectos
 								</a>
 							</Link>
 						</li>
