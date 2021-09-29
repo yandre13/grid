@@ -47,7 +47,7 @@ export default function Home() {
 						>
 							<h1
 								style={{height: width}}
-								className="flex flex-col font-sec text-5xl"
+								className="flex flex-col justify-center font-sec text-5xl"
 							>
 								Somos
 							</h1>
