@@ -97,6 +97,7 @@ function Navbar() {
 							</Link>
 						</li>
 						<li className="py-3 md:py-[3px]">
+						<Link href="servicios">
 							<a
 								className={cn('font-sec font-semibold text-sm', {
 									'hover:text-white': isMobile,
@@ -104,6 +105,7 @@ function Navbar() {
 							>
 								Servicios
 							</a>
+							</Link>
 						</li>
 						<li className="py-3 md:py-[3px]">
 							<Link href="contacto">
