@@ -169,7 +169,9 @@ body {
 	.swiper-pagination-bullet {
 	margin: 0 8px !important;
 }
-
+.swiper-pagination-bullets {
+	padding-bottom: 6px !important;
+}
 .port_slider.swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {

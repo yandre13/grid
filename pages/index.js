@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Grid from 'components/Grid'
 import Navbar from 'components/Navbar'
@@ -24,6 +25,18 @@ SwiperCore.use([Pagination, Zoom])
 
 export default function Home() {
 	const [width] = useAppWidth()
+	const ref = React.useRef()
+	React.useEffect(() => {
+		const bullets = document.querySelector(
+			'.swiper-pagination.swiper-pagination-clickable',
+		)
+		if (bullets) {
+			bullets.style.width = `${4 * width}px`
+			bullets.style.display = 'flex'
+			bullets.style.marginLeft = `${12 * width}px`
+			bullets.style.justifyContent = 'space-between'
+		}
+	}, [width])
 	return (
 		<>
 			<Head>
@@ -47,37 +60,50 @@ export default function Home() {
 									<article className="w-full">
 										<div className="w-full" style={{height: `${width * 15}px`}}>
 											<img
-												src="/img/COVER.jpg"
+												src="/img/carrusel/1.jpg"
 												alt=""
 												className="absolute top-0 w-full h-full object-cover"
 												width={1920}
-												height={925}
+												height={1080}
 											/>
 										</div>
 									</article>
 								</SwiperSlide>
 								<SwiperSlide>
 									<article className="w-full">
-										<div className="w-full h-0 overflow-hidden relative pb-[62.5%] md:pb-[53.28%] lg:pb-[54.42%] xl:pb-[51.7272%]">
+										<div className="w-full" style={{height: `${width * 15}px`}}>
 											<img
-												src="/img/COVER.jpg"
+												src="/img/carrusel/2.jpg"
 												alt=""
 												className="absolute top-0 w-full h-full object-cover"
 												width={1920}
-												height={925}
+												height={1080}
 											/>
 										</div>
 									</article>
 								</SwiperSlide>
 								<SwiperSlide>
 									<article className="w-full">
-										<div className="w-full h-0 overflow-hidden relative pb-[62.5%] md:pb-[53.28%] lg:pb-[54.42%] xl:pb-[51.7272%]">
+										<div className="w-full" style={{height: `${width * 15}px`}}>
 											<img
-												src="/img/COVER.jpg"
+												src="/img/carrusel/3.jpg"
 												alt=""
 												className="absolute top-0 w-full h-full object-cover"
 												width={1920}
-												height={925}
+												height={1080}
+											/>
+										</div>
+									</article>
+								</SwiperSlide>
+								<SwiperSlide>
+									<article className="w-full">
+										<div className="w-full" style={{height: `${width * 15}px`}}>
+											<img
+												src="/img/carrusel/4.jpg"
+												alt=""
+												className="absolute top-0 w-full h-full object-cover"
+												width={1920}
+												height={1080}
 											/>
 										</div>
 									</article>
