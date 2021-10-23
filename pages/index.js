@@ -31,13 +31,13 @@ export default function Home() {
 
 	const size = React.useMemo(() => {
 		if (query === 'xl') {
-			return {width: 29, height: 15}
+			return {width: 29, height: 15, btnWidth: 3, btnMl: 1, btnMt: 3}
 		} else if (query === 'lg') {
-			return {width: 22, height: 12}
+			return {width: 22, height: 12, btnWidth: 5, btnMl: 4, btnMt: 10}
 		} else if (query === 'md') {
-			return {width: 15, height: 8}
+			return {width: 15, height: 8, btnWidth: 5, btnMl: 5, btnMt: 1}
 		} else {
-			return {width: 8, height: 5}
+			return {width: 8, height: 5, btnWidth: 4, btnMl: 2, btnMt: 2}
 		}
 	}, [query])
 
@@ -234,14 +234,15 @@ export default function Home() {
 						</div>
 
 						<div
-							className="w-[50%] mx-auto mt-0
-                    md:w-[33.3%] md:mx-auto md:mt-[6.66%]
-                    lg:w-[22.7%] lg:ml-[9.08%] lg:mr-[4.54%] lg:mt-[45.4%]
-                    xl:w-[10.344%] xl:ml-[3.448%] xl:mr-0 xl:mt-[10.344%]
-                    "
+							style={{
+								width: width * size.btnWidth,
+								height: width,
+								marginLeft: width * size.btnMl,
+								marginTop: width * size.btnMt,
+							}}
 						>
 							<Link href="/portafolio">
-								<a className="w-full bg-[#FDD704] relative h-0 flex pb-[25%] md:pb-[20%] xl:pb-[33.33%]">
+								<a className="w-full bg-[#FDD704] relative h-full flex">
 									<div className="absolute h-full w-[75%] md:w-[80%] xl:w-[66.66%] text-center text-sm md:text-base xl:text-xs font-sec inline-flex justify-center items-center">
 										Ver más proyectos
 									</div>

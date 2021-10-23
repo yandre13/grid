@@ -12,7 +12,7 @@ export default function CardHome({
 }) {
 	return (
 		<div {...props}>
-			<div className={cn('w-full h-0 relative', aspectRatio)}>
+			<div className={cn('w-full h-full relative', aspectRatio)}>
 				<a href="#">
 					<Image
 						src={image}

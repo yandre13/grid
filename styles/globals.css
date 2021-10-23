@@ -36,6 +36,9 @@ body {
 .ar4x6 {
 	padding-bottom: 150%;
 }
+.ar3x3 {
+	padding-bottom: 100%;
+}
 @layer utilities {
 	/*Aspect ratio*/
 	.ar4x6 {

@@ -34,7 +34,7 @@ export default function Home() {
 				width: 8,
 				height: 12,
 				ml: 2,
-				textWidth: 10,
+				textWidth: 9,
 				titleMt: 3,
 				textMt: 1,
 				gap: 2,
@@ -132,7 +132,7 @@ export default function Home() {
 								<div
 									style={{
 										width: `${width * size.textWidth}px`,
-										height: `${width * 12}px`,
+										height: `${width * (query === 'xl' ? 12 : 11)}px`,
 										marginLeft: width,
 										marginTop: `${width * size.titleMt}px`,
 									}}
@@ -147,23 +147,31 @@ export default function Home() {
 									<h2 style={{height: width}}>
 										<Logo
 											color="black"
-											classname="w-[106px] md:w-[96px] lg:w-[106px] 2xl:w-[216px]"
+											classname="w-[106px] md:w-[184px] lg:w-[186px] 2xl:w-[216px]"
 										/>
 									</h2>
 									<p
 										style={{
 											marginTop: `${width * size.textMt}px`,
-											lineHeight: 1.14,
-											fontSize: 17,
+											lineHeight:
+												query === 'xl' ? 1.14 : query === 'lg' ? 1.69 : 1.58,
+											fontSize:
+												query === 'xl' ? 17 : query === 'lg' ? 16 : 13.6,
 										}}
-										className="pt-4"
+										className={cn(
+											query === 'xl' && 'pt-4',
+											query === 'lg' && 'pt-1',
+											query === 'md' && 'pt-3',
+										)}
 									>
 										Somos un equipo multidisciplinario de arquitectos,
 										diseñadores y artistas.
 										<br />
+										{query === 'md' && <div className="mb-3" />}
 										Todos enamorados del arte digital y la visualización en tres
 										dimensiones.
 										<br />
+										{query === 'md' && <div className="mb-5" />}
 										Disfrutamos que los proyectos sean un reto, que nos exijan
 										aprender constantemente. Queremos que nos busquen por un
 										resultado único, una metodología innovadora, y el aporte
@@ -171,6 +179,7 @@ export default function Home() {
 										plasmar espacios aun no existentes y contar una historia en
 										ellos.
 										<br />
+										{query === 'md' && <div className="mb-7" />}
 										Compromiso, comunicación y pasión son partes fundamentales
 										de cada proyecto. Amamos lo que hacemos. <br />
 										Es así de simple.
@@ -179,9 +188,11 @@ export default function Home() {
 								<div
 									style={{
 										width: `${width * 24}px`,
-										height: `${width * 10}px`,
+										height: `${
+											width * (query === 'xl' ? 10 : query === 'lg' ? 11 : 14)
+										}px`,
 										marginLeft: `${width * size.ml}px`,
-										marginTop: width,
+										marginTop: query === 'xl' ? width : 0,
 									}}
 								>
 									<h3
