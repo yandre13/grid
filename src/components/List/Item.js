@@ -86,16 +86,16 @@ function Item({id}) {
 				// exit={{scale: 0.96, transition: {duration: 0.35}}}
 				// transition={{duration: 0.7, delay: 0.15}}
 				className="fixed z-20 translate-middle
-				
-				xl:w-[98%] xl:top-[6%] xl:bottom-[5%] mx-auto"
+				w-full inset-0
+				md:w-[96%] lg:w-[98%] md:top-[6%] md:bottom-[5%] mx-auto"
 			>
 				<div className="relative w-full h-full flex flex-wrap">
 					{project.id && (
 						<>
 							<div
-								className="h-[45vh] md:h-[20vh] lg:h-[46%] w-full lg:w-[12%] mr-[3%]
+								className="w-full h-[45vh] md:h-[46%] lg:h-[46%] md:w-[17%] lg:w-[15%] xl:w-[12%] md:mr-[3%]
 								
-							flex items-center flex-col md:flex-row lg:flex-col md:justify-between bg-black self-end"
+							flex items-center flex-col md:flex-col md:justify-between bg-black self-end order-2 md:order-1"
 							>
 								<img
 									src={project.carousel.logo}
@@ -123,7 +123,7 @@ function Item({id}) {
 									</p>
 								</div>
 							</div>
-							<div className="w-full h-[55vh] md:h-[74vh] lg:w-[80.5%] mr-[4.5%] lg:h-full bg-white">
+							<div className="w-full h-[55vh] md:h-full md:w-[76.5%] lg:w-[77.5%] xl:w-[80.5%] md:mr-[1.5%] lg:mr-[4.5%] lg:h-full bg-white order-1">
 								<motion.div
 									// animate={{opacity: [0.5, 1]}}
 									// exit={{opacity: 0.5, transition: {duration: 0.45}}}
@@ -163,7 +163,7 @@ function Item({id}) {
 														<img
 															src={path}
 															alt=""
-															className="h-auto w-auto !max-w-[99%]"
+															className="h-auto w-auto md:!max-w-[99%]"
 															// layout="fill"
 															// width={1920}
 															// height={1440}
