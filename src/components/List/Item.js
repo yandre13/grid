@@ -109,16 +109,16 @@ function Item({id}) {
 									className="text-right self-end md:self-auto lg:self-end mt-12 md:mt-0
 								p-8 md:p-8 lg:px-6"
 								>
-									<h3 className="text-white text-base font-sec">
+									<h3 className="text-white text-lg md:text-base font-sec">
 										{project.title}
 									</h3>
-									<p className="text-white text-xs font-main mb-3">
+									<p className="text-white text-sm md:text-xs font-main mb-3">
 										{imageName}
 									</p>
-									<p className="text-white text-xs font-main leading-tight">
+									<p className="text-white text-sm md:text-xs font-main leading-tight">
 										{project.place}
 									</p>
-									<p className="text-white text-xs font-main leading-tight">
+									<p className="text-white text-sm md:text-xs font-main leading-tight">
 										{project.date}
 									</p>
 								</div>
@@ -163,7 +163,7 @@ function Item({id}) {
 														<img
 															src={path}
 															alt=""
-															className="h-auto w-auto md:!max-w-[99%]"
+															className="w-full h-full object-cover md:h-auto md:w-auto md:!max-w-[99%]"
 															// layout="fill"
 															// width={1920}
 															// height={1440}
