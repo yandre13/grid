@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Grid from 'components/Grid'
 import Navbar from 'components/Navbar'
@@ -7,11 +8,25 @@ import Footer from 'components/Footer'
 
 import banner from '../public/img/servicios.jpg'
 
-import {useAppWidth} from 'context'
-import Logo from 'components/svgs/Logo'
-import logos from 'data/logos'
+import {useAppQuery, useAppWidth} from 'context'
+
+import useMedia from 'hooks/useMedia'
 export default function Home() {
 	const [width] = useAppWidth()
+	const query = useAppQuery()
+	const isMobileTablet = useMedia('(max-width: 1047px)')
+
+	const size = React.useMemo(() => {
+		if (query === 'xl') {
+			return {imgWidth: 23, imgHeight: 13, imgMl: 3}
+		} else if (query === 'lg') {
+			return {imgWidth: 18, imgHeight: 10, imgMl: 2}
+		} else if (query === 'md') {
+			return {imgWidth: 13, imgHeight: 7, imgMl: 1}
+		} else {
+			return {imgWidth: 6, imgHeight: 4, imgMl: 1}
+		}
+	}, [query])
 	return (
 		<>
 			<Head>
@@ -28,7 +43,7 @@ export default function Home() {
 						<h2
 							style={{
 								height: width,
-								marginLeft: `${width * 3}px`,
+								marginLeft: `${width * size.imgMl}px`,
 								marginTop: width,
 							}}
 							className="font-sec text-[28px] w-full flex items-center pl-1 pt-2"
@@ -36,11 +51,11 @@ export default function Home() {
 							Modelado 3D.
 						</h2>
 						<div
-							className="overflow-hidden"
+							className="overflow-hidden custom-height"
 							style={{
-								width: `${width * 23}px`,
-								height: `${width * 13}px`,
-								marginLeft: `${width * 3}px`,
+								width: `${width * size.imgWidth}px`,
+								height: `${width * size.imgHeight}px`,
+								marginLeft: `${width * size.imgMl}px`,
 							}}
 						>
 							<Image src={banner} alt="Somos Visualiza" placeholder="blur" />
@@ -49,7 +64,7 @@ export default function Home() {
 						<h2
 							style={{
 								height: width,
-								marginLeft: `${width * 3}px`,
+								marginLeft: `${width * size.imgMl}px`,
 								marginTop: width,
 							}}
 							className="font-sec text-[28px] w-full flex items-center pl-1 pt-2"
@@ -57,11 +72,11 @@ export default function Home() {
 							Tour virtual 360.
 						</h2>
 						<div
-							className="overflow-hidden"
+							className="overflow-hidden custom-height"
 							style={{
-								width: `${width * 23}px`,
-								height: `${width * 13}px`,
-								marginLeft: `${width * 3}px`,
+								width: `${width * size.imgWidth}px`,
+								height: `${width * size.imgHeight}px`,
+								marginLeft: `${width * size.imgMl}px`,
 							}}
 						>
 							<Image src={banner} alt="Somos Visualiza" placeholder="blur" />
@@ -70,7 +85,7 @@ export default function Home() {
 						<h2
 							style={{
 								height: width,
-								marginLeft: `${width * 3}px`,
+								marginLeft: `${width * size.imgMl}px`,
 								marginTop: width,
 							}}
 							className="font-sec text-[28px] w-full flex items-center pl-1 pt-2"
@@ -78,11 +93,11 @@ export default function Home() {
 							Visualización arquitectónica.
 						</h2>
 						<div
-							className="overflow-hidden"
+							className="overflow-hidden custom-height"
 							style={{
-								width: `${width * 23}px`,
-								height: `${width * 13}px`,
-								marginLeft: `${width * 3}px`,
+								width: `${width * size.imgWidth}px`,
+								height: `${width * size.imgHeight}px`,
+								marginLeft: `${width * size.imgMl}px`,
 							}}
 						>
 							<Image src={banner} alt="Somos Visualiza" placeholder="blur" />
@@ -91,7 +106,7 @@ export default function Home() {
 						<h2
 							style={{
 								height: width,
-								marginLeft: `${width * 3}px`,
+								marginLeft: `${width * size.imgMl}px`,
 								marginTop: width,
 							}}
 							className="font-sec text-[28px] w-full flex items-center pl-1 pt-2"
@@ -99,11 +114,11 @@ export default function Home() {
 							Fotografía aérea.
 						</h2>
 						<div
-							className="overflow-hidden"
+							className="overflow-hidden custom-height"
 							style={{
-								width: `${width * 23}px`,
-								height: `${width * 13}px`,
-								marginLeft: `${width * 3}px`,
+								width: `${width * size.imgWidth}px`,
+								height: `${width * size.imgHeight}px`,
+								marginLeft: `${width * size.imgMl}px`,
 							}}
 						>
 							<Image src={banner} alt="Somos Visualiza" placeholder="blur" />
@@ -112,7 +127,7 @@ export default function Home() {
 						<h2
 							style={{
 								height: width,
-								marginLeft: `${width * 3}px`,
+								marginLeft: `${width * size.imgMl}px`,
 								marginTop: width,
 							}}
 							className="font-sec text-[28px] w-full flex items-center pl-1 pt-2"
@@ -120,11 +135,11 @@ export default function Home() {
 							Recorridos virtuales.
 						</h2>
 						<div
-							className="overflow-hidden"
+							className="overflow-hidden custom-height"
 							style={{
-								width: `${width * 23}px`,
-								height: `${width * 13}px`,
-								marginLeft: `${width * 3}px`,
+								width: `${width * size.imgWidth}px`,
+								height: `${width * size.imgHeight}px`,
+								marginLeft: `${width * size.imgMl}px`,
 							}}
 						>
 							<Image src={banner} alt="Somos Visualiza" placeholder="blur" />
@@ -133,7 +148,7 @@ export default function Home() {
 						<h2
 							style={{
 								height: width,
-								marginLeft: `${width * 3}px`,
+								marginLeft: `${width * size.imgMl}px`,
 								marginTop: width,
 							}}
 							className="font-sec text-[28px] w-full flex items-center pl-1 pt-2"
@@ -141,12 +156,12 @@ export default function Home() {
 							Marketing inmobiliario.
 						</h2>
 						<div
-							className="overflow-hidden"
+							className="overflow-hidden custom-height"
 							style={{
-								width: `${width * 23}px`,
-								height: `${width * 13}px`,
-								marginLeft: `${width * 3}px`,
-								marginBottom: `${width * 2}px`,
+								width: `${width * size.imgWidth}px`,
+								height: `${width * size.imgHeight}px`,
+								marginLeft: `${width * size.imgMl}px`,
+								marginBottom: `${width * (isMobileTablet ? 1 : 2)}px`,
 							}}
 						>
 							<Image src={banner} alt="Somos Visualiza" placeholder="blur" />
