@@ -1,17 +1,35 @@
+import React from 'react'
 import Head from 'next/head'
 import Grid from 'components/Grid'
 import Navbar from 'components/Navbar'
-
+import cn from 'classnames'
 import Image from 'next/image'
 import Footer from 'components/Footer'
 
 import banner from '../public/img/oficina.jpg'
 
-import {useAppWidth} from 'context'
+import {useAppWidth, useAppQuery} from 'context'
 import Logo from 'components/svgs/Logo'
 import logos from 'data/logos'
+import useMedia from 'hooks/useMedia'
+
 export default function Home() {
 	const [width] = useAppWidth()
+	const query = useAppQuery()
+	const isMobile = useMedia('(max-width: 767px)')
+
+	const size = React.useMemo(() => {
+		if (query === 'xl') {
+			return {width: 11, height: 16, ml: 3}
+		} else if (query === 'lg') {
+			return {width: 8, height: 12, ml: 2}
+		} else if (query === 'md') {
+			return {width: 6, height: 10, ml: 1}
+		} else {
+			return {width: 6, height: 9, ml: 1}
+		}
+	}, [query])
+
 	return (
 		<>
 			<Head>
@@ -22,98 +40,151 @@ export default function Home() {
 			<main className="flex flex-wrap my-3 mx-3 md:my-4 md:ml-0 md:mr-4">
 				<Navbar />
 				<div className="relative h-full w-full md:w-[85%] lg:w-[87%] xl:w-[89%]">
-					<Grid />
-					<div className="flex flex-wrap">
+					{isMobile && (
+						<>
+							<section className="absolute h-[100vh] bg-black flex flex-col justify-center p-9 -ml-3 -mr-3 w-[calc(100%+1.5rem)]">
+								<h1 className="font-sec text-5xl text-white">Somos</h1>
+								<div className="pb-16">
+									<Logo color="white" classname="w-[200px]" />
+								</div>
+								<div className="flex items-center gap-3 transform -rotate-90 absolute bottom-[52px] left-[-30px]">
+									<div className="border-b border-[#C2C2C2] w-14 h-1"></div>
+									<span className="text-white text-xl">Desliza</span>
+								</div>
+							</section>
+							<section className="absolute h-[70vh] p-9 -ml-3 -mr-3 w-[calc(100%+1.5rem)] top-[100vh]">
+								<p
+									style={{
+										lineHeight: 1.5,
+										fontSize: 16,
+									}}
+								>
+									Somos un equipo multidisciplinario de arquitectos, diseñadores
+									y artistas.
+									<br />
+									Todos enamorados del arte digital y la visualización en tres
+									dimensiones.
+									<br />
+									Disfrutamos que los proyectos sean un reto, que nos exijan
+									aprender constantemente. Queremos que nos busquen por un
+									resultado único, una metodología innovadora, y el aporte
+									creativo en todo el proceso. Creemos en la oportunidad de
+									plasmar espacios aun no existentes y contar una historia en
+									ellos.
+									<br />
+									Compromiso, comunicación y pasión son partes fundamentales de
+									cada proyecto. Amamos lo que hacemos. <br />
+									Es así de simple.
+								</p>
+							</section>
+						</>
+					)}
+
+					<Grid
+						classname={cn(isMobile && 'mt-[176vh]')}
+						style={{
+							height: isMobile && width * 11 + 1,
+							overflow: isMobile ? 'hidden' : '',
+						}}
+					/>
+					<div
+						className={cn('flex flex-wrap', isMobile && 'mt-[176vh]')}
+						style={{marginBottom: isMobile && width}}
+					>
 						{/* imgs */}
 						<div
 							className="overflow-hidden"
 							style={{
-								width: `${width * 11}px`,
-								height: `${width * 16}px`,
-								marginLeft: `${width * 3}px`,
+								width: `${width * size.width}px`,
+								height: `${width * size.height}px`,
+								marginLeft: `${width * size.ml}px`,
 								marginTop: width,
 							}}
 						>
 							<Image src={banner} alt="Somos Visualiza" placeholder="blur" />
 						</div>
-						<div
-							style={{
-								width: `${width * 11}px`,
-								height: `${width * 12}px`,
-								marginLeft: width,
-								marginTop: `${width * 4}px`,
-							}}
-							className="pl-3"
-						>
-							<h1
-								style={{height: width}}
-								className="flex flex-col justify-center font-sec text-5xl"
-							>
-								Somos
-							</h1>
-							<h2 style={{height: width}}>
-								<Logo
-									color="black"
-									classname="w-[106px] md:w-[96px] lg:w-[106px] 2xl:w-[216px]"
-								/>
-							</h2>
-							<p
-								style={{
-									marginTop: `${width * 3}px`,
-									lineHeight: 1.14,
-									fontSize: 17,
-								}}
-								className="pt-4"
-							>
-								Somos un equipo multidisciplinario de arquitectos, diseñadores y
-								artistas.
-								<br />
-								Todos enamorados del arte digital y la visualización en tres
-								dimensiones.
-								<br />
-								Disfrutamos que los proyectos sean un reto, que nos exijan
-								aprender constantemente. Queremos que nos busquen por un
-								resultado único, una metodología innovadora, y el aporte
-								creativo en todo el proceso. Creemos en la oportunidad de
-								plasmar espacios aun no existentes y contar una historia en
-								ellos.
-								<br />
-								Compromiso, comunicación y pasión son partes fundamentales de
-								cada proyecto. Amamos lo que hacemos. <br />
-								Es así de simple.
-							</p>
-						</div>
-						<div
-							style={{
-								width: `${width * 24}px`,
-								height: `${width * 10}px`,
-								marginLeft: `${width * 3}px`,
-								marginTop: width,
-							}}
-						>
-							<h3
-								className="font-sec text-xl pl-1"
-								style={{height: width, paddingTop: width / 2}}
-							>
-								Nuestros clientes.
-							</h3>
-							<div
-								className="flex flex-wrap"
-								style={{marginTop: width, columnGap: width}}
-							>
-								{logos.map(({logo, alt}) => (
-									<div
-										style={{
-											width: `${width * 3}px`,
-											height: `${width * 2}px`,
-											marginBottom: width,
-										}}
+						{!isMobile && (
+							<>
+								<div
+									style={{
+										width: `${width * 11}px`,
+										height: `${width * 12}px`,
+										marginLeft: width,
+										marginTop: `${width * 4}px`,
+									}}
+									className="pl-3"
+								>
+									<h1
+										style={{height: width}}
+										className="flex flex-col justify-center font-sec text-5xl"
 									>
-										<Image src={logo} alt={alt} placeholder="blur" />
+										Somos
+									</h1>
+									<h2 style={{height: width}}>
+										<Logo
+											color="black"
+											classname="w-[106px] md:w-[96px] lg:w-[106px] 2xl:w-[216px]"
+										/>
+									</h2>
+									<p
+										style={{
+											marginTop: `${width * 3}px`,
+											lineHeight: 1.14,
+											fontSize: 17,
+										}}
+										className="pt-4"
+									>
+										Somos un equipo multidisciplinario de arquitectos,
+										diseñadores y artistas.
+										<br />
+										Todos enamorados del arte digital y la visualización en tres
+										dimensiones.
+										<br />
+										Disfrutamos que los proyectos sean un reto, que nos exijan
+										aprender constantemente. Queremos que nos busquen por un
+										resultado único, una metodología innovadora, y el aporte
+										creativo en todo el proceso. Creemos en la oportunidad de
+										plasmar espacios aun no existentes y contar una historia en
+										ellos.
+										<br />
+										Compromiso, comunicación y pasión son partes fundamentales
+										de cada proyecto. Amamos lo que hacemos. <br />
+										Es así de simple.
+									</p>
+								</div>
+								<div
+									style={{
+										width: `${width * 24}px`,
+										height: `${width * 10}px`,
+										marginLeft: `${width * 3}px`,
+										marginTop: width,
+									}}
+								>
+									<h3
+										className="font-sec text-xl pl-1"
+										style={{height: width, paddingTop: width / 2}}
+									>
+										Nuestros clientes.
+									</h3>
+									<div
+										className="flex flex-wrap"
+										style={{marginTop: width, columnGap: width}}
+									>
+										{logos.map(({logo, alt}) => (
+											<div
+												style={{
+													width: `${width * 3}px`,
+													height: `${width * 2}px`,
+													marginBottom: width,
+												}}
+											>
+												<Image src={logo} alt={alt} placeholder="blur" />
+											</div>
+										))}
 									</div>
-								))}
-							</div>
-						</div>
+								</div>
+							</>
+						)}
 					</div>
 
 					{/* <Footer /> */}

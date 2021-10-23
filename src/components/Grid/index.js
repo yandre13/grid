@@ -1,7 +1,7 @@
 import {useAppQuery, useAppWidth} from 'context'
 import React from 'react'
 
-function Grid({hidden = false}) {
+function Grid({hidden = false, classname, ...props}) {
 	const gridRef = React.useRef()
 	const query = useAppQuery()
 	const [width, dispatch] = useAppWidth()
@@ -29,7 +29,11 @@ function Grid({hidden = false}) {
 	console.log(lines)
 	console.log('render grid')
 	return (
-		<div className="wrapper-grid" ref={gridRef}>
+		<div
+			className={`wrapper-grid ${classname && classname}`}
+			ref={gridRef}
+			{...props}
+		>
 			{!hidden && <div className="line-right" />}
 			<div className="h-full w-full relative flex flex-wrap">
 				{Array.from(Array(29).keys()).map(e => (

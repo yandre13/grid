@@ -62,7 +62,7 @@ function Navbar() {
 					animate={open ? 'visible' : 'hidden'}
 					initial="hidden"
 					className={cn(
-						'-mt-4 -ml-3 -mr-3 w-[calc(100%+6rem)] bg-black md:w-[96px] lg:w-[106px] 2xl:w-[116px] md:bg-transparent md:m-0',
+						'-mt-4 -ml-3 -mr-3 w-[calc(100%+1.5rem)] bg-black md:w-[96px] lg:w-[106px] 2xl:w-[116px] md:bg-transparent md:m-0',
 						'md:clear-trs',
 					)}
 				>
@@ -97,14 +97,14 @@ function Navbar() {
 							</Link>
 						</li>
 						<li className="py-3 md:py-[3px]">
-						<Link href="servicios">
-							<a
-								className={cn('font-sec font-semibold text-sm', {
-									'hover:text-white': isMobile,
-								})}
-							>
-								Servicios
-							</a>
+							<Link href="servicios">
+								<a
+									className={cn('font-sec font-semibold text-sm', {
+										'hover:text-white': isMobile,
+									})}
+								>
+									Servicios
+								</a>
 							</Link>
 						</li>
 						<li className="py-3 md:py-[3px]">
