@@ -20,11 +20,35 @@ export default function Home() {
 
 	const size = React.useMemo(() => {
 		if (query === 'xl') {
-			return {width: 11, height: 16, ml: 3}
+			return {
+				width: 11,
+				height: 16,
+				ml: 3,
+				textWidth: 11,
+				titleMt: 4,
+				textMt: 3,
+				gap: 1,
+			}
 		} else if (query === 'lg') {
-			return {width: 8, height: 12, ml: 2}
+			return {
+				width: 8,
+				height: 12,
+				ml: 2,
+				textWidth: 10,
+				titleMt: 3,
+				textMt: 1,
+				gap: 2,
+			}
 		} else if (query === 'md') {
-			return {width: 6, height: 10, ml: 1}
+			return {
+				width: 6,
+				height: 10,
+				ml: 1,
+				textWidth: 6,
+				titleMt: 2,
+				textMt: 0,
+				gap: 2,
+			}
 		} else {
 			return {width: 6, height: 9, ml: 1}
 		}
@@ -107,10 +131,10 @@ export default function Home() {
 							<>
 								<div
 									style={{
-										width: `${width * 11}px`,
+										width: `${width * size.textWidth}px`,
 										height: `${width * 12}px`,
 										marginLeft: width,
-										marginTop: `${width * 4}px`,
+										marginTop: `${width * size.titleMt}px`,
 									}}
 									className="pl-3"
 								>
@@ -128,7 +152,7 @@ export default function Home() {
 									</h2>
 									<p
 										style={{
-											marginTop: `${width * 3}px`,
+											marginTop: `${width * size.textMt}px`,
 											lineHeight: 1.14,
 											fontSize: 17,
 										}}
@@ -156,7 +180,7 @@ export default function Home() {
 									style={{
 										width: `${width * 24}px`,
 										height: `${width * 10}px`,
-										marginLeft: `${width * 3}px`,
+										marginLeft: `${width * size.ml}px`,
 										marginTop: width,
 									}}
 								>
@@ -168,7 +192,7 @@ export default function Home() {
 									</h3>
 									<div
 										className="flex flex-wrap"
-										style={{marginTop: width, columnGap: width}}
+										style={{marginTop: width, columnGap: width * size.gap}}
 									>
 										{logos.map(({logo, alt}) => (
 											<div
