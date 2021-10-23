@@ -30,19 +30,18 @@ function Grid({hidden = false}) {
 	console.log('render grid')
 	return (
 		<div className="wrapper-grid" ref={gridRef}>
-			<div className="line-right"></div>
-
+			{!hidden && <div className="line-right" />}
 			<div className="h-full w-full relative flex flex-wrap">
 				{Array.from(Array(29).keys()).map(e => (
 					<div key={e} style={{width}}>
-						{!hidden && <div className="absolute h-full line-child-y"></div>}
+						{!hidden && <div className="absolute h-full line-child-y" />}
 					</div>
 				))}
 
 				<div className="absolute w-full flex flex-col">
 					{Array.from(Array(350).keys()).map(e => (
 						<div key={e} style={{height: width}}>
-							{!hidden && <div className="absolute w-full line-child-x"></div>}
+							{!hidden && <div className="absolute w-full line-child-x" />}
 						</div>
 					))}
 				</div>
