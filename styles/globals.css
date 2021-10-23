@@ -39,6 +39,9 @@ body {
 .ar3x3 {
 	padding-bottom: 100%;
 }
+.custom-height div {
+	height: 100% !important;
+}
 @layer utilities {
 	/*Aspect ratio*/
 	.ar4x6 {

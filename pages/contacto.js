@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Grid from 'components/Grid'
 import Navbar from 'components/Navbar'
@@ -6,10 +7,61 @@ import Image from 'next/image'
 
 import banner from '../public/img/contacto.png'
 
-import {useAppWidth} from 'context'
+import {useAppQuery, useAppWidth} from 'context'
+import useMedia from 'hooks/useMedia'
+import cn from 'classnames'
 
 export default function Home() {
 	const [width] = useAppWidth()
+	const query = useAppQuery()
+	const isMobile = useMedia('(max-width: 767px)')
+	const size = React.useMemo(() => {
+		if (query === 'xl') {
+			return {
+				imgWidth: 10,
+				imgHeight: 14,
+				imgMt: 0.7,
+				imgMl: 2,
+				textWidth: 11,
+				textHeight: 12,
+				textMl: 1,
+				textMt: 4.8,
+			}
+		} else if (query === 'lg') {
+			return {
+				imgWidth: 9,
+				imgHeight: 13,
+				imgMt: 0.7,
+				imgMl: 2,
+				textWidth: 9,
+				textHeight: 6,
+				textMl: 1,
+				textMt: 4,
+			}
+		} else if (query === 'md') {
+			return {
+				imgWidth: 6.8,
+				imgHeight: 9,
+				imgMt: 0.7,
+				imgMl: 1,
+				textWidth: 4,
+				textHeight: 6,
+				textMl: 1,
+				textMt: 3,
+			}
+		} else {
+			return {
+				imgWidth: 8,
+				imgHeight: 10,
+				imgMt: 0,
+				imgMl: 0,
+				textWidth: 8,
+				textHeight: 6,
+				textMl: 0,
+				textMt: 1,
+			}
+		}
+	}, [query])
 	return (
 		<>
 			<Head>
@@ -24,40 +76,43 @@ export default function Home() {
 					<div className="flex flex-wrap">
 						{/* imgs */}
 						<h1
-							className="font-sec text-3xl pl-1"
+							className={cn(
+								'font-sec text-3xl pl-1',
+								isMobile && 'absolute !w-auto inset-x-0 z-10 !p-0 text-center',
+							)}
 							style={{
 								width: `${width * 24}px`,
 								height: `${width * 1}px`,
-								marginLeft: `${width * 2}px`,
-								marginTop: `${width * 1}px`,
+								marginLeft: `${width * size.imgMl}px`,
+								marginTop: `${width * (isMobile ? 1.5 : 1)}px`,
 							}}
 						>
 							Conversemos.
 						</h1>
 						<div
-							className="overflow-hidden"
+							className="overflow-hidden custom-height"
 							style={{
-								width: `${width * 10}px`,
-								height: `${width * 14}px`,
-								marginLeft: `${width * 2}px`,
-								marginTop: `${width * 0.7}px`,
+								width: `${width * size.imgWidth}px`,
+								height: `${width * size.imgHeight}px`,
+								marginLeft: `${width * size.imgMl}px`,
+								marginTop: `${width * size.imgMt}px`,
 							}}
 						>
 							<Image
 								src={banner}
 								alt="Somos Visualiza"
 								placeholder="blur"
-								className="object-cover"
+								className="object-cover h-full"
 							/>
 						</div>
 						<div
 							style={{
-								width: `${width * 11}px`,
-								height: `${width * 12}px`,
-								marginLeft: width,
-								marginTop: `${width * 4}px`,
+								width: `${width * size.textWidth}px`,
+								height: `${width * size.textHeight}px`,
+								marginLeft: width * size.textMl,
+								marginTop: `${width * size.textMt}px`,
 							}}
-							className="pl-3"
+							className={cn(isMobile ? 'px-4' : 'pl-3')}
 						>
 							<p className="text-sm font-sec leading-none">Email</p>
 							<a className="text-sm" href="mailto:contacto@visualiza.pe">
