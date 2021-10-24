@@ -106,7 +106,7 @@ function Item({id}) {
 									// height={1440}
 								/>
 								<div
-									className="text-right self-end md:self-auto lg:self-end mt-12 md:mt-0
+									className="text-right self-end md:self-auto lg:self-end md:mt-12 md:mt-0
 								p-8 md:p-8 lg:px-6"
 								>
 									<h3 className="text-white text-lg md:text-base font-sec">
