@@ -48,8 +48,11 @@ export default function Home() {
 		if (bullets) {
 			bullets.style.width = `${4 * width}px`
 			bullets.style.display = 'flex'
-			bullets.style.marginLeft = `${12 * width}px`
-			bullets.style.justifyContent = 'space-between'
+			bullets.style.marginLeft = `${
+				(query === 'xl' ? 12 : query === 'lg' ? 9 : query === 'md' ? 6 : 2) *
+				width
+			}px`
+			bullets.style.justifyContent = 'space-around'
 		}
 	}, [width])
 	return (

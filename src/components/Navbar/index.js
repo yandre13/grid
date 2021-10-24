@@ -22,7 +22,7 @@ function Navbar() {
 	const [open, setOpen] = React.useState(false)
 	return (
 		<header
-			className="mb-3 sm:mb-5 md:mb-0 flex flex-wrap w-full
+			className="mb-3 md:mb-0 flex flex-wrap w-full
         md:w-[15%] md:h-[100vh] md:justify-center
         lg:w-[13%] xl:w-[11%]"
 		>
@@ -34,7 +34,7 @@ function Navbar() {
 			>
 				<div
 					className={cn('w-full order-1 md:order-first flex justify-between', {
-						'mt-2': open && isMobile,
+						'mt-3': open && isMobile,
 					})}
 				>
 					<h2 className="font-semibold text-xl md:mt-1 xl:mt-2 md:mb-8 w-full">

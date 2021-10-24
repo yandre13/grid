@@ -167,7 +167,7 @@ body {
 .home_slider.swiper-container-horizontal
 	> .swiper-pagination-bullets
 	.swiper-pagination-bullet {
-	margin: 0 18px !important;
+	margin: 0 !important;
 }
 
 .swiper-container-horizontal
