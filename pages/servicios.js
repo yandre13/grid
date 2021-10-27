@@ -11,6 +11,10 @@ import banner from '../public/img/servicios.jpg'
 import {useAppQuery, useAppWidth} from 'context'
 
 import useMedia from 'hooks/useMedia'
+import videojs from 'video.js'
+import videojsYoutube from 'videojs-youtube'
+import 'video.js/dist/video-js.css'
+
 export default function Home() {
 	const [width] = useAppWidth()
 	const query = useAppQuery()
@@ -27,6 +31,17 @@ export default function Home() {
 			return {imgWidth: 6, imgHeight: 4, imgMl: 1}
 		}
 	}, [query])
+
+	React.useEffect(() => {
+		const player = videojs('vs-video', {
+			fluid: true,
+			playbackRates: [0.5, 1, 1.5, 2],
+			playsinline: true,
+			aspectRatio: '16:9',
+		})
+		return () => player && player.dispose()
+	}, [])
+
 	return (
 		<>
 			<Head>
@@ -58,7 +73,15 @@ export default function Home() {
 								marginLeft: `${width * size.imgMl}px`,
 							}}
 						>
-							<Image src={banner} alt="Somos Visualiza" placeholder="blur" />
+							<iframe
+								className="ku-embed"
+								frameborder="0"
+								allowFullScreen
+								allow="xr-spatial-tracking; gyroscope; accelerometer"
+								scrolling="no"
+								style={{width: '100%', height: '100%'}}
+								src="https://mls.kuu.la/share/collection/7kHgr?fs=1&vr=1&autorotate=0.22&autop=25&thumbs=1&inst=0"
+							></iframe>
 						</div>
 
 						<h2
@@ -79,7 +102,21 @@ export default function Home() {
 								marginLeft: `${width * size.imgMl}px`,
 							}}
 						>
-							<Image src={banner} alt="Somos Visualiza" placeholder="blur" />
+							<video
+								controls
+								id="vs-video"
+								className="video-js vjs-big-play-centered"
+								width="750"
+								height="500"
+								// poster={allData?.productData?.acf?.video?.thumbnail?.url}
+								data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}], "youtube": { "iv_load_policy": 1 } }'
+							>
+								{/* <source
+									src="https://www.youtube.com/embed/BokdSWC2R68"
+									type="video/mp4"
+								/> */}
+							</video>
+							{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/BokdSWC2R68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 						</div>
 
 						<h2
