@@ -36,23 +36,23 @@ export default function Home() {
 	}, [query])
 
 	React.useEffect(() => {
-		const player = videojs('vs-video', {
-			fluid: true,
-			playbackRates: [0.5, 1, 1.5, 2],
-			playsinline: true,
-			aspectRatio: '16:9',
-		})
-		const player2 = videojs('vs-video2', {
-			fluid: true,
-			playbackRates: [0.5, 1, 1.5, 2],
-			playsinline: true,
-			aspectRatio: '16:9',
-		})
+		// const player = videojs('vs-video', {
+		// 	fluid: true,
+		// 	playbackRates: [0.5, 1, 1.5, 2],
+		// 	playsinline: true,
+		// 	aspectRatio: '16:9',
+		// })
+		// const player2 = videojs('vs-video2', {
+		// 	fluid: true,
+		// 	playbackRates: [0.5, 1, 1.5, 2],
+		// 	playsinline: true,
+		// 	aspectRatio: '16:9',
+		// })
 		return () => {
-			if (player && player2) {
-				player && player.dispose()
-				player2 && player2.dispose()
-			}
+			// if (player && player2) {
+			// 	player && player.dispose()
+			// 	player2 && player2.dispose()
+			// }
 		}
 	}, [])
 
@@ -199,15 +199,15 @@ export default function Home() {
 								zIndex: 1,
 							}}
 						>
-							<video
-								controls
-								id="vs-video2"
-								className="video-js vjs-big-play-centered"
-								width="750"
-								height="500"
-								// poster={allData?.productData?.acf?.video?.thumbnail?.url}
-								data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/LthDz0yyUsE"}], "youtube": { "iv_load_policy": 1 } }'
-							/>
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/LthDz0yyUsE"
+								title="Recorridos virtuales"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
 						</div>
 
 						<h2
@@ -230,15 +230,15 @@ export default function Home() {
 								marginBottom: `${width * (isMobileTablet ? 1 : 2)}px`,
 							}}
 						>
-							<video
-								controls
-								id="vs-video"
-								className="video-js vjs-big-play-centered"
-								width="750"
-								height="500"
-								// poster={allData?.productData?.acf?.video?.thumbnail?.url}
-								data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/0uekokAx7hM"}], "youtube": { "iv_load_policy": 1 } }'
-							/>
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/0uekokAx7hM"
+								title="Marketing inmobiliario"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowFullScreen
+							></iframe>
 						</div>
 					</div>
 
