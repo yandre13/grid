@@ -14,9 +14,6 @@ import visual from '../public/img/servicios/VISUALIZACION_ARQUITECTONICA.webp'
 import {useAppQuery, useAppWidth} from 'context'
 
 import useMedia from 'hooks/useMedia'
-import videojs from 'video.js'
-import 'videojs-youtube'
-import 'video.js/dist/video-js.css'
 
 export default function Home() {
 	const [width] = useAppWidth()
@@ -34,27 +31,6 @@ export default function Home() {
 			return {imgWidth: 6, imgHeight: 4, imgMl: 1}
 		}
 	}, [query])
-
-	React.useEffect(() => {
-		// const player = videojs('vs-video', {
-		// 	fluid: true,
-		// 	playbackRates: [0.5, 1, 1.5, 2],
-		// 	playsinline: true,
-		// 	aspectRatio: '16:9',
-		// })
-		// const player2 = videojs('vs-video2', {
-		// 	fluid: true,
-		// 	playbackRates: [0.5, 1, 1.5, 2],
-		// 	playsinline: true,
-		// 	aspectRatio: '16:9',
-		// })
-		return () => {
-			// if (player && player2) {
-			// 	player && player.dispose()
-			// 	player2 && player2.dispose()
-			// }
-		}
-	}, [])
 
 	return (
 		<>
@@ -202,7 +178,7 @@ export default function Home() {
 							<iframe
 								width="100%"
 								height="100%"
-								src="https://www.youtube.com/embed/LthDz0yyUsE"
+								src="https://www.youtube.com/embed/LthDz0yyUsE?rel=0"
 								title="Recorridos virtuales"
 								frameBorder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -233,7 +209,7 @@ export default function Home() {
 							<iframe
 								width="100%"
 								height="100%"
-								src="https://www.youtube.com/embed/0uekokAx7hM"
+								src="https://www.youtube.com/embed/0uekokAx7hM?rel=0"
 								title="Marketing inmobiliario"
 								frameBorder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
