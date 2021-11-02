@@ -75,7 +75,7 @@ function Item({id}) {
 				style={{pointerEvents: 'auto'}}
 				className="overlay"
 			>
-				<Link href="/portafolio" scroll={false}>
+				<Link href="proyectos" scroll={false}>
 					<a ref={linkRef}></a>
 				</Link>
 			</motion.div>
@@ -180,7 +180,7 @@ function Item({id}) {
 							bg-white bg-opacity-60 flex justify-center items-center font-bold top-4 right-4 text-[#222]
 							md:w-6 md:h-6 md:rounded-none md:text-xl md:right-auto md:left-4"
 							>
-								<Link href="/portafolio" scroll={false}>
+								<Link href="proyectos" scroll={false}>
 									<a>x</a>
 								</Link>
 							</div>

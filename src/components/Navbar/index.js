@@ -54,7 +54,7 @@ function Navbar() {
 						onClick={() => setOpen(!open)}
 					>
 						<Menu />
-						{!open ? <span>Menu</span> : <span>Close</span>}
+						{!open ? <span>Menú</span> : <span>Cerrar</span>}
 					</span>
 				</div>
 				<motion.nav
@@ -73,10 +73,10 @@ function Navbar() {
 						)}
 					>
 						<li className="py-3 md:py-[3px]">
-							<Link href="portafolio">
+							<Link href="proyectos">
 								<a
 									className={cn('font-sec font-semibold text-sm', {
-										'hover:text-white': isMobile,
+										'text-white': router.pathname === 'proyectos' && isMobile,
 									})}
 								>
 									Proyectos
@@ -86,11 +86,9 @@ function Navbar() {
 						<li className="py-3 md:py-[3px]">
 							<Link href="nosotros">
 								<a
-									className={cn(
-										'font-sec font-semibold text-sm',
-										{'hover:text-white': isMobile},
-										{'text-white': router.pathname === '/' && isMobile},
-									)}
+									className={cn('font-sec font-semibold text-sm', {
+										'text-white': router.pathname === 'nosotros' && isMobile,
+									})}
 								>
 									Nosotros
 								</a>
@@ -100,7 +98,7 @@ function Navbar() {
 							<Link href="servicios">
 								<a
 									className={cn('font-sec font-semibold text-sm', {
-										'hover:text-white': isMobile,
+										'text-white': router.pathname === 'servicios' && isMobile,
 									})}
 								>
 									Servicios
@@ -111,7 +109,7 @@ function Navbar() {
 							<Link href="contacto">
 								<a
 									className={cn('font-sec font-semibold text-sm', {
-										'hover:text-white': isMobile,
+										'text-white': router.pathname === 'contacto' && isMobile,
 									})}
 								>
 									Contacto
