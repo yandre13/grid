@@ -6,6 +6,7 @@ import {ReactQueryDevtools} from 'react-query/devtools'
 import {AppQueryProvider, AppWidthProvider} from 'context'
 import {useRouter} from 'next/router'
 import Loader from 'components/Loader'
+import logosApi from 'data/logos'
 
 function MyApp({Component, pageProps}) {
 	const [queryClient] = React.useState(
@@ -22,8 +23,18 @@ function MyApp({Component, pageProps}) {
 				},
 			}),
 	)
-	const router = useRouter()
 	const [loading, setLoading] = React.useState(true)
+
+	const fetchLogos = () => logosApi
+	const prefetchLogos = async () => {
+		await queryClient.prefetchQuery('logos', fetchLogos, {
+			staleTime: 600000,
+			cacheTime: 900000,
+			refetchOnMount: false,
+			refetchOnWindowFocus: false,
+			refetchOnReconnect: false,
+		})
+	}
 
 	React.useEffect(() => {
 		if (loading) {
@@ -31,9 +42,8 @@ function MyApp({Component, pageProps}) {
 		}
 	}, [])
 	React.useEffect(() => {
-		// router.events.on('routeChangeStart', () => setLoading(true))
-		// router.events.on('routeChangeComplete', () => setLoading(false))
-	}, [router])
+		prefetchLogos()
+	}, [])
 
 	return (
 		<QueryClientProvider client={queryClient}>

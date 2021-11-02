@@ -7,18 +7,20 @@ import Image from 'next/image'
 import banner from '../public/img/oficina.jpg'
 import {useAppWidth, useAppQuery} from 'context'
 import Logo from 'components/svgs/Logo'
-import logos from 'data/logos'
+// import logos from 'data/logos'
 import useMedia from 'hooks/useMedia'
 import useLoaded from 'hooks/useLoaded'
 import {motion} from 'framer-motion'
 import ButtonWsp from 'components/ButtonWsp'
 import {getRandom} from 'utils'
+import {useQuery} from 'react-query'
 
 export default function Home() {
 	const [width] = useAppWidth()
 	const query = useAppQuery()
 	const isMobile = useMedia('(max-width: 767px)')
 	const loaded = useLoaded()
+	const {data: logos} = useQuery('logos')
 	const [showLogos, setShowLogos] = React.useState(getRandom(logos, 12) ?? [])
 	const [showLogosMobile, setShowLogosMobile] = React.useState(
 		getRandom(logos, 1) ?? [],
@@ -153,20 +155,25 @@ export default function Home() {
 								</h3>
 							</section>
 							<section className="-ml-3 -mr-3 w-[calc(100%+1.5rem)] mt-9 relative">
-								<div className="w-full h-full">
-									{showLogosMobile?.map(({path, alt}) => (
-										<motion.div
-											key={`logo-${alt}`}
-											initial={{opacity: 0}}
-											animate={{opacity: 1}}
-											transition={{duration: 0.7}}
-											exit={{opacity: 0, transition: {duration: 0.5}}}
-											layoutId={`logo-${alt}`}
-											className="w-full h-full"
-										>
-											<img src={path} alt={alt} className="w-full !h-auto" />
-										</motion.div>
-									))}
+								<div
+									className="w-full h-full bg-black"
+									style={{minHeight: '240px'}}
+								>
+									<div className="w-full h-full">
+										{showLogosMobile?.map(({path, alt}) => (
+											<motion.img
+												key={alt}
+												initial={{opacity: 0.6}}
+												animate={{opacity: 1}}
+												transition={{duration: 0.7}}
+												exit={{opacity: 0.6, transition: {duration: 0.5}}}
+												src={path}
+												alt={alt}
+												style={{maxHeight: 240}}
+												className="w-full !h-auto object-cover"
+											/>
+										))}
+									</div>
 								</div>
 							</section>
 						</>
