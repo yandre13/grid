@@ -70,7 +70,7 @@ export default function Home() {
 			setTimeout(() => {
 				const newLogos = getRandom(logos, 12)
 				setShowLogos(newLogos)
-			}, 4000)
+			}, 5000)
 		}
 	}, [showLogos, isMobile])
 	React.useEffect(() => {
@@ -78,7 +78,7 @@ export default function Home() {
 			setTimeout(() => {
 				const newLogos = getRandom(logos, 1)
 				setShowLogosMobile(newLogos)
-			}, 114000)
+			}, 2000)
 		}
 	}, [showLogosMobile, isMobile])
 
