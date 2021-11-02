@@ -1,20 +1,10 @@
 import React from 'react'
-import Image from 'next/image'
-import loader from '../../public/img/loader.gif'
 
 function Loader() {
 	return (
-		<div
-			style={{
-				width: '100vw',
-				height: '100vh',
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-			}}
-		>
-			<Image src={loader} width={360} />
-		</div>
+		<video autoPlay muted loop id="myVideo" className="myV">
+			<source src="img/loader.mp4" type="video/mp4" />
+		</video>
 	)
 }
 

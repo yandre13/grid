@@ -24,10 +24,7 @@ function CardPortfolio({project, width, query}) {
 				marginBottom: `${width * project?.styles?.[query]?.mb}px`,
 			}}
 		>
-			<motion.div
-				className={cn('w-full h-0 overflow-hidden relative', aspectRatio)}
-				layoutId={`card-${id}`}
-			>
+			<div className={cn('w-full h-0 overflow-hidden relative', aspectRatio)}>
 				<a role="button" onClick={e => open(e, id)}>
 					<Image
 						src={image}
@@ -58,7 +55,7 @@ function CardPortfolio({project, width, query}) {
 						</span>
 					</div>
 				</div>
-			</motion.div>
+			</div>
 		</div>
 	)
 }
