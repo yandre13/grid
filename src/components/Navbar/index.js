@@ -75,8 +75,8 @@ function Navbar() {
 						<li className="py-3 md:py-[3px]">
 							<Link href="proyectos">
 								<a
-									className={cn('font-sec font-semibold text-sm', {
-										'text-white': router.pathname === 'proyectos' && isMobile,
+									className={cn('font-sec font-semibold text-sm block w-full', {
+										'text-white': router.pathname === '/proyectos' && isMobile,
 									})}
 								>
 									Proyectos
@@ -86,8 +86,8 @@ function Navbar() {
 						<li className="py-3 md:py-[3px]">
 							<Link href="nosotros">
 								<a
-									className={cn('font-sec font-semibold text-sm', {
-										'text-white': router.pathname === 'nosotros' && isMobile,
+									className={cn('font-sec font-semibold text-sm block w-full', {
+										'text-white': router.pathname === '/nosotros' && isMobile,
 									})}
 								>
 									Nosotros
@@ -97,8 +97,8 @@ function Navbar() {
 						<li className="py-3 md:py-[3px]">
 							<Link href="servicios">
 								<a
-									className={cn('font-sec font-semibold text-sm', {
-										'text-white': router.pathname === 'servicios' && isMobile,
+									className={cn('font-sec font-semibold text-sm block w-full', {
+										'text-white': router.pathname === '/servicios' && isMobile,
 									})}
 								>
 									Servicios
@@ -108,8 +108,8 @@ function Navbar() {
 						<li className="py-3 md:py-[3px]">
 							<Link href="contacto">
 								<a
-									className={cn('font-sec font-semibold text-sm', {
-										'text-white': router.pathname === 'contacto' && isMobile,
+									className={cn('font-sec font-semibold text-sm block w-full', {
+										'text-white': router.pathname === '/contacto' && isMobile,
 									})}
 								>
 									Contacto

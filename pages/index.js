@@ -8,7 +8,7 @@ import Image from 'next/image'
 import CardHome from 'components/Card/CardHome'
 import Footer from 'components/Footer'
 
-import footer from '../public/img/FOOTER.webp'
+import footer from '../public/img/FOOTER.jpg'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/swiper.min.css'
