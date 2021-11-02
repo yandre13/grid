@@ -12,11 +12,13 @@ import {useAppWidth, useAppQuery} from 'context'
 import Logo from 'components/svgs/Logo'
 import logos from 'data/logos'
 import useMedia from 'hooks/useMedia'
+import useLoaded from 'hooks/useLoaded'
 
 export default function Home() {
 	const [width] = useAppWidth()
 	const query = useAppQuery()
 	const isMobile = useMedia('(max-width: 767px)')
+	const loaded = useLoaded()
 
 	const size = React.useMemo(() => {
 		if (query === 'xl') {
@@ -106,6 +108,7 @@ export default function Home() {
 
 					<Grid
 						classname={cn(isMobile && 'mt-[176vh]')}
+						loaded={loaded}
 						style={{
 							height: isMobile && width * 11 + 1,
 							overflow: isMobile ? 'hidden' : '',
@@ -196,8 +199,8 @@ export default function Home() {
 									}}
 								>
 									<h3
-										className="font-sec text-xl pl-1"
-										style={{height: width, paddingTop: width / 2}}
+										className="font-sec text-[22px] md:text-[28px] pl-1 flex items-center"
+										style={{height: width}}
 									>
 										Nuestros clientes.
 									</h3>
