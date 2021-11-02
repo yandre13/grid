@@ -4,6 +4,8 @@ import {QueryClient, QueryClientProvider} from 'react-query'
 import {Hydrate} from 'react-query/hydration'
 import {ReactQueryDevtools} from 'react-query/devtools'
 import {AppQueryProvider, AppWidthProvider} from 'context'
+import {useRouter} from 'next/router'
+import Loader from 'components/Loader'
 
 function MyApp({Component, pageProps}) {
 	const [queryClient] = React.useState(
@@ -20,19 +22,25 @@ function MyApp({Component, pageProps}) {
 				},
 			}),
 	)
-	const [width, setWidth] = React.useState(0)
+	const router = useRouter()
+	const [loading, setLoading] = React.useState(true)
 
-	// sm: '540px',
-	// 		md: '768px',
-	// 		lg: '1048px',
-	// 		xl: '1280px',
+	React.useEffect(() => {
+		if (loading) {
+			setTimeout(() => setLoading(false), 1000)
+		}
+	}, [])
+	React.useEffect(() => {
+		// router.events.on('routeChangeStart', () => setLoading(true))
+		// router.events.on('routeChangeComplete', () => setLoading(false))
+	}, [router])
 
 	return (
 		<QueryClientProvider client={queryClient}>
 			<Hydrate state={pageProps.dehydratedState}>
 				<AppWidthProvider>
 					<AppQueryProvider>
-						<Component {...pageProps} />
+						{loading ? <Loader /> : <Component {...pageProps} />}
 					</AppQueryProvider>
 				</AppWidthProvider>
 			</Hydrate>

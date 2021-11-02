@@ -7,11 +7,13 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import ListPortfolio from 'components/List/ListPortfolio'
 import Item from 'components/List/Item'
+import useLoaded from 'hooks/useLoaded'
 
 export default function Home() {
 	const {
 		query: {projectId},
 	} = useRouter()
+	const loaded = useLoaded()
 	return (
 		<AnimateSharedLayout type="crossfade">
 			<Head>
@@ -22,7 +24,7 @@ export default function Home() {
 			<main className="flex flex-wrap my-3 mx-3 md:my-4 md:ml-0 md:mr-4">
 				<Navbar />
 				<div className="relative h-full w-full md:w-[85%] lg:w-[87%] xl:w-[89%]">
-					<Grid />
+					<Grid loaded={loaded} />
 					<div className="flex flex-wrap">
 						{/* <div className="hidden my-[12.5%] md:mt-[-13.32%]"></div>
 						<div className="hidden my-[12.5%] md:mt-[-33.3%]"></div>
@@ -38,7 +40,6 @@ export default function Home() {
 							{projectId && <Item id={projectId} key="item" />}
 						</AnimatePresence>
 					</div>
-					<Footer />
 				</div>
 			</main>
 		</AnimateSharedLayout>

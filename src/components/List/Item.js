@@ -81,11 +81,11 @@ function Item({id}) {
 			</motion.div>
 
 			<motion.div
-				// layoutId={`card-${id}`}
-				// animate={{scale: [1, 1.2, 1]}}
-				// exit={{scale: 0.96, transition: {duration: 0.35}}}
-				// transition={{duration: 0.7, delay: 0.15}}
-				className="fixed z-20 translate-middle
+				layoutId={`card-${id}`}
+				animate={{opacity: 1, scale: 1}}
+				exit={{opacity: 0, scale: 1, transition: {duration: 0.35}}}
+				transition={{duration: 0.7, delay: 0.15}}
+				className="fixed z-20
 				w-full inset-0
 				md:w-[96%] lg:w-[98%] md:top-[6%] md:bottom-[5%] mx-auto"
 			>

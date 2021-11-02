@@ -119,8 +119,8 @@ body {
 }
 
 .translate-middle {
-	left: 50%;
-	transform: translateX(-50%);
+	left: 50% !important;
+	transform: translateX(-50%) !important;
 }
 .overlay {
 	z-index: 11;

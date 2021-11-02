@@ -1,21 +1,23 @@
 import {useAppQuery, useAppWidth} from 'context'
+import {motion} from 'framer-motion'
 import React from 'react'
 
-function Grid({hidden = false, classname, ...props}) {
+function Grid({hidden = false, classname, loaded = false, ...props}) {
 	const gridRef = React.useRef()
 	const query = useAppQuery()
+	const [loading, setLoading] = React.useState(false)
 	const [width, dispatch] = useAppWidth()
 
 	const lines =
 		query === 'xl' ? 29 : query === 'lg' ? 22 : query === 'md' ? 15 : 8
 
 	function resize() {
-		dispatch(gridRef.current.getBoundingClientRect().width / lines)
+		dispatch(gridRef.current?.getBoundingClientRect().width / lines)
 	}
 	React.useEffect(() => {
 		console.log(gridRef)
 		if (gridRef.current) {
-			dispatch(gridRef.current.getBoundingClientRect().width / lines)
+			dispatch(gridRef.current?.getBoundingClientRect().width / lines)
 		}
 	}, [query])
 
@@ -24,15 +26,19 @@ function Grid({hidden = false, classname, ...props}) {
 		visualViewport.addEventListener('resize', resize)
 		return () => visualViewport.removeEventListener('resize', resize)
 	}, [query])
-	console.log(width)
-	console.log(query)
-	console.log(lines)
-	console.log('render grid')
+
+	React.useEffect(() => {
+		if (loaded) setTimeout(() => setLoading(true), 700)
+	}, [loading, loaded])
+
 	return (
-		<div
+		<motion.div
 			className={`wrapper-grid ${classname && classname}`}
 			ref={gridRef}
 			{...props}
+			initial={{opacity: 0}}
+			animate={{opacity: loading ? 1 : 0}}
+			transition={{duration: 0.7}}
 		>
 			{!hidden && <div className="line-right" />}
 			<div className="h-full w-full relative flex flex-wrap">
@@ -50,7 +56,7 @@ function Grid({hidden = false, classname, ...props}) {
 					))}
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 
