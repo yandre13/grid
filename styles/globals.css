@@ -284,3 +284,17 @@ button:focus {
 
 	background-size: cover;
 }
+
+.pscroll::-webkit-scrollbar {
+	width: 12px; /* width of the entire scrollbar */
+}
+
+.pscroll::-webkit-scrollbar-track {
+	background: #fff; /* color of the tracking area */
+}
+
+.pscroll::-webkit-scrollbar-thumb {
+	background-color: var(--grid-color); /* color of the scroll thumb */
+	border-radius: 20px; /* roundness of the scroll thumb */
+	border: 3px solid #fff; /* creates padding around scroll thumb */
+}

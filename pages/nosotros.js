@@ -28,9 +28,9 @@ export default function Home() {
 				width: 11,
 				height: 16,
 				ml: 3,
-				textWidth: 11,
+				textWidth: 10,
 				titleMt: 4,
-				textMt: 3,
+				textMt: 1,
 				gap: 1,
 			}
 		} else if (query === 'lg') {
@@ -142,58 +142,67 @@ export default function Home() {
 								<div
 									style={{
 										width: `${width * size.textWidth}px`,
-										height: `${width * (query === 'xl' ? 12 : 11)}px`,
+										height: `${
+											width * (query === 'xl' ? 12 : query === 'lg' ? 11 : 10)
+										}px`,
 										marginLeft: width,
 										marginTop: `${width * size.titleMt}px`,
+										zIndex: 10,
 									}}
-									className="pl-3"
 								>
 									<h1
 										style={{height: width}}
-										className="flex flex-col justify-center font-sec text-5xl"
+										className="flex flex-col justify-center font-sec text-5xl pl-3"
 									>
 										Somos
 									</h1>
-									<h2 style={{height: width}}>
+									<h2 style={{height: width}} className="pl-3">
 										<Logo
 											color="black"
 											classname="w-[106px] md:w-[184px] lg:w-[186px] 2xl:w-[216px]"
 										/>
 									</h2>
-									<p
+									<div
 										style={{
-											marginTop: `${width * size.textMt}px`,
-											lineHeight:
-												query === 'xl' ? 1.14 : query === 'lg' ? 1.69 : 1.58,
-											fontSize:
-												query === 'xl' ? 17 : query === 'lg' ? 16 : 13.6,
+											marginTop: `${width * size.textMt + 1}px`,
+											marginLeft: 1,
+											zIndex: 10,
 										}}
-										className={cn(
-											query === 'xl' && 'pt-4',
-											query === 'lg' && 'pt-1',
-											query === 'md' && 'pt-3',
-										)}
 									>
-										Somos un equipo multidisciplinario de arquitectos,
-										diseñadores y artistas.
-										<br />
-										{query === 'md' && <div className="mb-3" />}
-										Todos enamorados del arte digital y la visualización en tres
-										dimensiones.
-										<br />
-										{query === 'md' && <div className="mb-5" />}
-										Disfrutamos que los proyectos sean un reto, que nos exijan
-										aprender constantemente. Queremos que nos busquen por un
-										resultado único, una metodología innovadora, y el aporte
-										creativo en todo el proceso. Creemos en la oportunidad de
-										plasmar espacios aun no existentes y contar una historia en
-										ellos.
-										<br />
-										{query === 'md' && <div className="mb-7" />}
-										Compromiso, comunicación y pasión son partes fundamentales
-										de cada proyecto. Amamos lo que hacemos. <br />
-										Es así de simple.
-									</p>
+										<p
+											style={{
+												background: '#fff',
+												overflow: 'auto',
+												height: `${
+													width *
+														(query === 'xl' ? 7 : query === 'lg' ? 8 : 7) -
+													1
+												}px`,
+												lineHeight:
+													query === 'xl' ? 1.84 : query === 'lg' ? 1.7 : 1.7,
+												fontSize:
+													query === 'xl' ? 17 : query === 'lg' ? 16 : 14,
+											}}
+											className={cn('p-3 pscroll')}
+										>
+											Somos un equipo multidisciplinario de arquitectos,
+											diseñadores y artistas.
+											<br />
+											Todos enamorados del arte digital y la visualización en
+											tres dimensiones.
+											<br />
+											Disfrutamos que los proyectos sean un reto, que nos exijan
+											aprender constantemente. Queremos que nos busquen por un
+											resultado único, una metodología innovadora, y el aporte
+											creativo en todo el proceso. Creemos en la oportunidad de
+											plasmar espacios aun no existentes y contar una historia
+											en ellos.
+											<br />
+											Compromiso, comunicación y pasión son partes fundamentales
+											de cada proyecto. Amamos lo que hacemos. <br />
+											Es así de simple.
+										</p>
+									</div>
 								</div>
 								<div
 									style={{
