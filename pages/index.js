@@ -4,13 +4,11 @@ import Grid from 'components/Grid'
 import Navbar from 'components/Navbar'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import CardHome from 'components/Card/CardHome'
 import Footer from 'components/Footer'
 
-import img1 from '../public/img/home_1.jpg'
-import img2 from '../public/img/home_2.jpg'
-import img3 from '../public/img/home_3.jpg'
-import img4 from '../public/img/home_4.jpg'
+import footer from '../public/img/FOOTER.webp'
 
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/swiper.min.css'
@@ -22,6 +20,7 @@ import {useAppWidth, useAppQuery} from 'context'
 import {data} from 'data/home'
 import {motion} from 'framer-motion'
 import useLoaded from 'hooks/useLoaded'
+import ButtonWsp from 'components/ButtonWsp'
 
 // install Swiper modules
 SwiperCore.use([Pagination, Zoom])
@@ -33,13 +32,45 @@ export default function Home() {
 
 	const size = React.useMemo(() => {
 		if (query === 'xl') {
-			return {width: 29, height: 15, btnWidth: 3, btnMl: 1, btnMt: 3}
+			return {
+				width: 29,
+				height: 15,
+				btnWidth: 3,
+				btnMl: 1,
+				btnMt: 3,
+				footerW: 29,
+				footerH: 9,
+			}
 		} else if (query === 'lg') {
-			return {width: 22, height: 12, btnWidth: 5, btnMl: 4, btnMt: 10}
+			return {
+				width: 22,
+				height: 12,
+				btnWidth: 5,
+				btnMl: 4,
+				btnMt: 10,
+				footerW: 22,
+				footerH: 8,
+			}
 		} else if (query === 'md') {
-			return {width: 15, height: 8, btnWidth: 5, btnMl: 5, btnMt: 1}
+			return {
+				width: 15,
+				height: 8,
+				btnWidth: 5,
+				btnMl: 5,
+				btnMt: 1,
+				footerW: 15,
+				footerH: 6,
+			}
 		} else {
-			return {width: 8, height: 5, btnWidth: 4, btnMl: 2, btnMt: 2}
+			return {
+				width: 8,
+				height: 5,
+				btnWidth: 4,
+				btnMl: 2,
+				btnMt: 2,
+				footerW: 8,
+				footerH: 4,
+			}
 		}
 	}, [query])
 
@@ -266,23 +297,24 @@ export default function Home() {
 						{/* LAST */}
 						<article className="w-full">
 							<div
-								className="w-full h-0 overflow-hidden relative pb-[50%] 
-                    md:pb-[39.96%] 
-                    lg:pb-[36.32%] 
-                    xl:pb-[31.032%]"
+								style={{
+									width: width * size.footerW,
+									height: width * size.footerH,
+								}}
+								className="overflow-hidden custom-height"
 							>
-								<img
-									src="/img/FOOTER.jpg"
-									alt=""
-									className="absolute top-0 w-full h-full object-cover"
-									width={1920}
-									height={925}
+								<Image
+									src={footer}
+									alt="Visualiza cover"
+									className="w-full h-full object-cover"
+									placeholder="blur"
 								/>
 							</div>
 						</article>
 					</div>
 					<Footer />
 				</div>
+				<ButtonWsp />
 			</motion.main>
 		</>
 	)

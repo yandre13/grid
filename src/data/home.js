@@ -6,8 +6,8 @@ import img4 from '../../public/img/home_4.jpg'
 export const data = [
 	{
 		id: 1,
-		title: 'Proyecto casa A',
-		description: 'Miraflores 2019',
+		title: 'Las Magnolias',
+		description: 'Lince 2021',
 		image: img1,
 		styles: {
 			xl: {mt: 1, ml: 3},
@@ -25,8 +25,8 @@ export const data = [
 	},
 	{
 		id: 2,
-		title: 'Proyecto casa B',
-		description: 'Miraflores 2019',
+		title: 'Libertad',
+		description: 'Miraflores 2020',
 		image: img2,
 		styles: {
 			xl: {mt: 4, ml: 5},
@@ -44,8 +44,8 @@ export const data = [
 	},
 	{
 		id: 3,
-		title: 'Proyecto casa C',
-		description: 'Miraflores 2019',
+		title: 'Pasaje Laureles',
+		description: 'San Isidro 2021',
 		image: img3,
 		styles: {
 			xl: {mt: 2, ml: 8},
@@ -63,8 +63,8 @@ export const data = [
 	},
 	{
 		id: 4,
-		title: 'Proyecto casa D',
-		description: 'Miraflores 2019',
+		title: 'POD',
+		description: 'Miraflores 2020',
 		image: img4,
 		styles: {
 			xl: {mt: -5, ml: 4},

@@ -15,12 +15,17 @@ import {useAppQuery, useAppWidth} from 'context'
 
 import useMedia from 'hooks/useMedia'
 import {useRouter} from 'next/router'
+import {motion} from 'framer-motion'
+import useLoaded from 'hooks/useLoaded'
+import ButtonWsp from 'components/ButtonWsp'
 
 export default function Home() {
 	const [width] = useAppWidth()
 	const query = useAppQuery()
 	const isMobileTablet = useMedia('(max-width: 1047px)')
 	const router = useRouter()
+	const loaded = useLoaded()
+
 	const size = React.useMemo(() => {
 		if (query === 'xl') {
 			return {imgWidth: 23, imgHeight: 13, imgMl: 3}
@@ -41,10 +46,15 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			{router.isReady ? (
-				<main className="flex flex-wrap my-3 mx-3 md:my-4 md:ml-0 md:mr-4">
+				<motion.main
+					initial={{opacity: 0}}
+					animate={{opacity: loaded ? 1 : 0}}
+					transition={{duration: 0.8}}
+					className="flex flex-wrap my-3 mx-3 md:my-4 md:ml-0 md:mr-4"
+				>
 					<Navbar />
 					<div className="relative h-full w-full md:w-[85%] lg:w-[87%] xl:w-[89%]">
-						<Grid />
+						<Grid loaded={loaded} />
 						<div className="flex flex-wrap">
 							{/* imgs */}
 							<h2
@@ -219,10 +229,9 @@ export default function Home() {
 								></iframe>
 							</div>
 						</div>
-
-						{/* <Footer /> */}
 					</div>
-				</main>
+					<ButtonWsp />
+				</motion.main>
 			) : null}
 		</>
 	)
