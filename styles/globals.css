@@ -42,6 +42,12 @@ body {
 .custom-height > div {
 	height: 100% !important;
 }
+.custom-full > div {
+	width: 100% !important;
+	height: 100% !important;
+	display: block !important;
+	overflow: visible !important;
+}
 @layer utilities {
 	/*Aspect ratio*/
 	.ar4x6 {
