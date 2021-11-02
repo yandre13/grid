@@ -4,10 +4,7 @@ import Grid from 'components/Grid'
 import Navbar from 'components/Navbar'
 import cn from 'classnames'
 import Image from 'next/image'
-import Footer from 'components/Footer'
-
 import banner from '../public/img/oficina.jpg'
-
 import {useAppWidth, useAppQuery} from 'context'
 import Logo from 'components/svgs/Logo'
 import logos from 'data/logos'
@@ -15,12 +12,14 @@ import useMedia from 'hooks/useMedia'
 import useLoaded from 'hooks/useLoaded'
 import {motion} from 'framer-motion'
 import ButtonWsp from 'components/ButtonWsp'
+import {getRandom} from 'utils'
 
 export default function Home() {
 	const [width] = useAppWidth()
 	const query = useAppQuery()
 	const isMobile = useMedia('(max-width: 767px)')
 	const loaded = useLoaded()
+	const [showLogos, setShowLogos] = React.useState(getRandom(logos, 12) ?? [])
 
 	const size = React.useMemo(() => {
 		if (query === 'xl') {
@@ -57,6 +56,19 @@ export default function Home() {
 			return {width: 6, height: 9, ml: 1}
 		}
 	}, [query])
+
+	// React.useEffect(() => {
+	// 	if (loaded) {
+	// 		window.scrollTo(0, 0)
+	// 	}
+	// }, [loaded])
+	React.useEffect(() => {
+		setTimeout(() => {
+			const newLogos = getRandom(logos, 12)
+			setShowLogos(newLogos)
+			console.log(showLogos)
+		}, 4000)
+	}, [showLogos])
 
 	return (
 		<>
@@ -224,16 +236,23 @@ export default function Home() {
 										className="flex flex-wrap"
 										style={{marginTop: width, columnGap: width * size.gap}}
 									>
-										{logos.map(({logo, alt}) => (
-											<div
+										{showLogos?.map(({logo, alt}) => (
+											<motion.div
+												key={`logo-${alt}`}
+												initial={{opacity: 0}}
+												animate={{opacity: 1}}
+												transition={{duration: 0.7}}
+												exit={{opacity: 0, transition: {duration: 0.5}}}
+												layoutId={`logo-${alt}`}
 												style={{
 													width: `${width * 3}px`,
 													height: `${width * 2}px`,
 													marginBottom: width,
+													zIndex: 10,
 												}}
 											>
 												<Image src={logo} alt={alt} placeholder="blur" />
-											</div>
+											</motion.div>
 										))}
 									</div>
 								</div>
