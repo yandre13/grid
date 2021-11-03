@@ -40,7 +40,6 @@ function Item({id}) {
 		}
 		document.body.style.overflow = 'hidden'
 		return () => {
-			console.log(scrollRef.current)
 			document.body.style.position = ''
 			document.body.style.top = ''
 			document.body.style.overflow = ''
@@ -146,8 +145,6 @@ function Item({id}) {
 											debouncedLoading ? 'opacity-0' : ''
 										}`}
 										onSlideChange={e => {
-											console.log(e.activeIndex)
-											console.log(project.carousel.images.length)
 											if (project.carousel.images.length > 1) {
 												setImageName(
 													project.carousel.images[e.activeIndex - 1]?.name ??

@@ -32,7 +32,6 @@ export function AppQueryProvider(props) {
 	const lg = useMedia('(min-width: 1048px) and (max-width: 1366px)')
 	const xl = useMedia('(min-width: 1367px)')
 	const query = xl ? 'xl' : lg ? 'lg' : md ? 'md' : 'sm'
-	console.log({lg})
 	return <AppQueryContext.Provider value={query} {...props} />
 }
 

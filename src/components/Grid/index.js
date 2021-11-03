@@ -15,7 +15,6 @@ function Grid({hidden = false, classname, loaded = false, ...props}) {
 		dispatch(gridRef.current?.getBoundingClientRect().width / lines)
 	}
 	React.useEffect(() => {
-		console.log(gridRef)
 		if (gridRef.current) {
 			dispatch(gridRef.current?.getBoundingClientRect().width / lines)
 		}

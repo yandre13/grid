@@ -12,7 +12,6 @@ function CardPortfolio({project, width, query}) {
 		e.preventDefault()
 		router.push(`?projectId=${id}`, undefined, {shallow: true})
 	}
-	console.log(width)
 
 	return (
 		<div
